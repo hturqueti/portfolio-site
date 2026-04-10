@@ -1,39 +1,54 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { PostCard } from '@/components/PostCard'
-import { getAllPosts } from '@/lib/posts'
+import { ProjectCard } from '@/components/ProjectCard'
+import { getAllPosts, getFeaturedProjects } from '@/lib/posts'
 
 export default function HomePage() {
   const posts = getAllPosts().slice(0, 5)
+  const projects = getFeaturedProjects(2)
 
   return (
     <>
       <section className="hero container">
-        <span className="eyebrow">Disponível para novos projetos</span>
-        <h1>
-          Ciência de dados e <span className="gradient-text">analytics</span>
-        </h1>
-        <p className="hero-copy">
-          Portfólio de projetos e estudos em dados, com foco em clareza técnica,
-          explicação didática e impacto de negócio.
-        </p>
-        <div className="hero-actions">
-          <Link href="/blog" className="button button-primary">
-            Ver posts
-          </Link>
-          <a href="https://github.com/hturqueti" className="button button-secondary">
-            GitHub
-          </a>
+        <div className="hero-logo-wrap">
+          <Image
+            src="/images/branding/logo.svg"
+            alt="Logo do site Henrique Turqueti"
+            width={150}
+            height={150}
+            priority
+            className="hero-logo"
+          />
+        </div>
+
+        <div className="hero-copy-wrap">
+          <h1>
+            Dados e <span className="gradient-text">Analytics</span>
+          </h1>
+          <p className="hero-copy">
+            Projetos, análises e aplicações em dados com foco em simplicidade, clareza e impacto.
+          </p>
+          <div className="hero-actions">
+            <Link href="/blog" className="button button-primary">
+              <span className="button-icon button-icon-posts" aria-hidden="true" />
+              Ver posts
+            </Link>
+            <Link href="/projetos" className="button button-primary">
+              <span className="button-icon button-icon-projects" aria-hidden="true" />
+              Ver projetos
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="container section">
         <div className="section-header">
           <div>
-            <p className="section-kicker">Conteúdo recente</p>
             <h2>Posts mais recentes</h2>
           </div>
           <Link href="/blog" className="inline-link">
-            Ver todos
+            Ver todos os posts
           </Link>
         </div>
 
@@ -44,25 +59,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container section about-grid">
-        <div className="surface-card">
-          <p className="section-kicker">Resumo</p>
-          <h2>Base funcional para seu novo site</h2>
-          <p>
-            Esta primeira versão já vem pronta para você publicar no Cloudflare Pages,
-            versionar no GitHub e começar a escrever posts em MDX com frontmatter.
-          </p>
+      <section className="container section home-projects-section">
+        <div className="section-header section-header-stack home-projects-header">
+          <div>
+            <h2>Projetos em destaque</h2>
+            <p className="section-copy">
+              Casos com mais profundidade, cobrindo contexto, abordagem analítica, modelagem e resultados.
+            </p>
+          </div>
+          <Link href="/projetos" className="inline-link">
+            Ver todos os projetos
+          </Link>
         </div>
 
-        <div className="surface-card">
-          <p className="section-kicker">Próximos upgrades</p>
-          <ul className="feature-list">
-            <li>Syntax highlighting com Shiki</li>
-            <li>Paginação</li>
-            <li>Componentes React dentro dos posts</li>
-            <li>Gráficos Plotly client-side</li>
-          </ul>
-        </div>
+        {projects.length > 0 ? (
+          <div className="project-grid">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        ) : (
+          <div className="surface-card projects-empty-state">
+            <p className="section-kicker">Sem destaques</p>
+            <h2>Escolha quais projetos quer destacar na home</h2>
+            <p>
+              Marque o frontmatter de um projeto com <code>featured: true</code> e, se quiser controlar a ordem, use
+              também <code>featuredOrder</code>.
+            </p>
+          </div>
+        )}
       </section>
     </>
   )

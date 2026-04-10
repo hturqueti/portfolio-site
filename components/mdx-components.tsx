@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { ComponentPropsWithoutRef } from 'react'
 import { MdxCallout } from '@/components/MdxCallout'
+import { MdxPre } from '@/components/MdxPre'
 
 type AnchorProps = ComponentPropsWithoutRef<'a'>
 
@@ -15,4 +16,5 @@ function MdxAnchor({ href = '', ...props }: AnchorProps) {
 export const mdxComponents = {
   a: MdxAnchor,
   MdxCallout,
+  pre: MdxPre,
 }

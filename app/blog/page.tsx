@@ -13,8 +13,10 @@ export default function BlogPage() {
     <section className="container section">
       <div className="section-header section-header-stack">
         <div>
-          <p className="section-kicker">Blog</p>
-          <h1>Todos os posts</h1>
+          <p className="eyebrow">Blog</p>
+          <h1>
+            Todos os <span className="gradient-text">posts</span>
+          </h1>
           <p className="section-copy">
             Conteúdo versionado em Git, escrito em MDX e gerado como site estático com Next.js.
           </p>

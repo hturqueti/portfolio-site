@@ -8,6 +8,13 @@ type IconProps = {
   className?: string
 }
 
+type InterestArea = {
+  title: string
+  description: string
+  iconSrc: string
+  iconClassName?: string
+}
+
 type Role = {
   title: string
   period: DateRange
@@ -65,94 +72,37 @@ type PeriodFormat = {
   currentLabel: string
 }
 
-function BrainIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
-      <path d="M9 4.5A3.5 3.5 0 0 0 5.5 8v.5A3 3 0 0 0 3 11.5a3 3 0 0 0 2.25 2.9A3.5 3.5 0 0 0 9 19.5h1.5v-15Z" />
-      <path d="M15 4.5A3.5 3.5 0 0 1 18.5 8v.5a3 3 0 0 1 2.5 3 3 3 0 0 1-2.25 2.9A3.5 3.5 0 0 1 15 19.5h-1.5v-15Z" />
-      <path d="M8 9.5h1M8 14.5h1M15 9.5h1M15 14.5h1" />
-    </svg>
-  )
-}
-
-function NetworkIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
-      <circle cx="6" cy="6" r="2.5" />
-      <circle cx="18" cy="6" r="2.5" />
-      <circle cx="12" cy="18" r="2.5" />
-      <path d="M8.2 7.2 10.8 10M15.8 7.2 13.2 10M8.6 16.2l2-1.1M15.4 16.2l-2-1.1" />
-    </svg>
-  )
-}
-
-function ChartIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
-      <path d="M4 19.5h16" />
-      <path d="M7 16V9.5" />
-      <path d="M12 16V6.5" />
-      <path d="M17 16v-4" />
-    </svg>
-  )
-}
-
-function SigmaIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
-      <path d="M16.5 5H7l5 7-5 7h9.5" />
-    </svg>
-  )
-}
-
-function CloudIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
-      <path d="M7.5 18.5h9a4 4 0 1 0-.7-7.94A5.5 5.5 0 0 0 5.5 12 3.5 3.5 0 0 0 7.5 18.5Z" />
-    </svg>
-  )
-}
-
-function SparklesIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
-      <path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Z" />
-      <path d="m18.5 14 0.9 2.6 2.6 0.9-2.6 0.9-0.9 2.6-0.9-2.6-2.6-0.9 2.6-0.9 0.9-2.6Z" />
-      <path d="m5.5 13 0.7 2 2 0.7-2 0.7-0.7 2-0.7-2-2-0.7 2-0.7 0.7-2Z" />
-    </svg>
-  )
-}
-
-const interestAreas = [
+const interestAreas: InterestArea[] = [
   {
     title: 'Machine Learning',
     description: 'Desenvolvimento de modelos preditivos, avaliação rigorosa e tradução de resultados analíticos em decisões práticas orientadas a negócio.',
-    Icon: BrainIcon,
+    iconSrc: '/images/icons/brain.svg',
   },
   {
     title: 'Deep Learning',
     description: 'Aplicação de redes neurais para problemas complexos, com foco em desempenho, generalização e experimentação reprodutível.',
-    Icon: NetworkIcon,
+    iconSrc: '/images/icons/binary-tree-2.svg',
+    iconClassName: 'interest-icon-image-rotated',
   },
   {
     title: 'Visualização de dados',
     description: 'Criação de narrativas visuais claras que destacam padrões, anomalias e indicadores relevantes para diferentes públicos.',
-    Icon: ChartIcon,
+    iconSrc: '/images/icons/chart-bar.svg',
   },
   {
     title: 'Estatística',
     description: 'Uso de fundamentos estatísticos para inferência, testes, modelagem e interpretação robusta de fenômenos observados nos dados.',
-    Icon: SigmaIcon,
+    iconSrc: '/images/icons/chart-histogram.svg',
   },
   {
     title: 'Computação em nuvem',
     description: 'Interesse em arquiteturas escaláveis para dados e IA, com atenção a custos, automação e confiabilidade operacional.',
-    Icon: CloudIcon,
+    iconSrc: '/images/icons/cloud-computing.svg',
   },
   {
     title: 'IA Generativa',
     description: 'Exploração de LLMs e aplicações generativas para acelerar análises, interfaces inteligentes e fluxos de trabalho.',
-    Icon: SparklesIcon,
+    iconSrc: '/images/icons/sparkles-2.svg',
   },
 ] as const
 
@@ -467,7 +417,7 @@ export default function AboutPage() {
       <section className="container section profile-hero">
         <div className="profile-photo-wrap">
           <Image
-            src="/images/profile-picture.webp"
+            src="/images/profile/profile-picture.webp"
             alt="Foto de Henrique Marques Turqueti"
             width={560}
             height={560}
@@ -477,8 +427,10 @@ export default function AboutPage() {
         </div>
 
         <div className="profile-intro">
-          <p className="section-kicker">Sobre mim</p>
-          <h1>Henrique Marques Turqueti</h1>
+          <p className="eyebrow">Sobre mim</p>
+          <h1>
+            Henrique Marques <span className="gradient-text">Turqueti</span>
+          </h1>
           <p className="profile-summary placeholder-copy">
             Engenheiro químico com pós-graduação em Ciência de Dados e mais de {yearsOfExperience} anos de experiência no setor financeiro. Atuei no Itaú Unibanco e no Itaú BBA com desenvolvimento de modelos, análises de comportamento de clientes e otimização de processos, e atualmente trabalho com <em>People Analytics</em>, gerando <em>insights</em> sobre remuneração, saúde, <em>turnover</em> e <em>performance</em> para apoiar decisões estratégicas.
           </p>
@@ -488,7 +440,6 @@ export default function AboutPage() {
       <section className="container section">
         <div className="section-header section-header-stack">
           <div>
-            <p className="section-kicker">Interesses</p>
             <h2>Áreas de interesse</h2>
             <p className="section-copy">
               Temas que concentram meu interesse de estudo e prática, com foco em modelagem, análise e aplicação de IA a problemas reais.
@@ -497,11 +448,18 @@ export default function AboutPage() {
         </div>
 
         <div className="interest-grid">
-          {interestAreas.map(({ title, description, Icon }) => (
+          {interestAreas.map(({ title, description, iconSrc, iconClassName }) => (
             <article key={title} className="interest-card">
               <div className="interest-header">
                 <div className="interest-icon">
-                  <Icon className="interest-icon-svg" />
+                  <Image
+                    src={iconSrc}
+                    alt=""
+                    width={24}
+                    height={24}
+                    aria-hidden="true"
+                    className={`interest-icon-image${iconClassName ? ` ${iconClassName}` : ''}`}
+                  />
                 </div>
                 <h3>{title}</h3>
               </div>
@@ -514,7 +472,6 @@ export default function AboutPage() {
       <section className="container section">
         <div className="section-header section-header-stack">
           <div>
-            <p className="section-kicker">Carreira</p>
             <h2>Experiência profissional</h2>
             <p className="section-copy">
               Trajetória em dados no setor financeiro, passando por analytics,modelagem, automação e ciência de dados em diferentes contextos de negócio.
@@ -561,7 +518,6 @@ export default function AboutPage() {
       <section className="container section">
         <div className="section-header section-header-stack">
           <div>
-            <p className="section-kicker">Formação</p>
             <h2>Formação acadêmica</h2>
             <p className="section-copy">
               Formação voltada a fundamentos quantitativos e computacionais, com evolução para estatística, modelagem e aprendizado de máquina.
