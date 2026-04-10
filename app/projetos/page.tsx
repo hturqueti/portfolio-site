@@ -1,3 +1,4 @@
+import { BackHomeButton } from '@/components/BackHomeButton'
 import { ProjectCard } from '@/components/ProjectCard'
 import { getAllProjects } from '@/lib/posts'
 
@@ -21,6 +22,7 @@ export default function ProjectsPage() {
             Projetos completos de análise, modelagem e solução de problemas reais, com foco em raciocínio, execução e
             impacto final.
           </p>
+          <BackHomeButton />
         </div>
       </div>
 

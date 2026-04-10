@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { existsSync } from 'node:fs'
 import path from 'node:path'
+import { BackHomeButton } from '@/components/BackHomeButton'
 
 type IconProps = {
   className?: string
@@ -434,6 +435,7 @@ export default function AboutPage() {
           <p className="profile-summary placeholder-copy">
             Engenheiro químico com pós-graduação em Ciência de Dados e mais de {yearsOfExperience} anos de experiência no setor financeiro. Atuei no Itaú Unibanco e no Itaú BBA com desenvolvimento de modelos, análises de comportamento de clientes e otimização de processos, e atualmente trabalho com <em>People Analytics</em>, gerando <em>insights</em> sobre remuneração, saúde, <em>turnover</em> e <em>performance</em> para apoiar decisões estratégicas.
           </p>
+          <BackHomeButton />
         </div>
       </section>
 

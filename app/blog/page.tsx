@@ -1,3 +1,4 @@
+import { BackHomeButton } from '@/components/BackHomeButton'
 import { PostCard } from '@/components/PostCard'
 import { getAllPosts } from '@/lib/posts'
 
@@ -20,6 +21,7 @@ export default function BlogPage() {
           <p className="section-copy">
             Conteúdo versionado em Git, escrito em MDX e gerado como site estático com Next.js.
           </p>
+          <BackHomeButton />
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useDeferredValue, useEffect, useMemo, useState, useTransition } from 'react'
+import { BackHomeButton } from '@/components/BackHomeButton'
 import type { SearchDocument } from '@/lib/posts'
 import { getTagSuggestions, searchPosts, sortSearchResults, type SearchSort } from '@/lib/search'
 
@@ -90,6 +91,7 @@ export function SearchPageClient({ documents }: SearchPageClientProps) {
             A busca considera título, tags e conteúdo dos posts, então consultas como &quot;python estatística&quot; também
             encontram textos que contenham esses termos em partes diferentes do post.
           </p>
+          <BackHomeButton />
         </div>
       </div>
 

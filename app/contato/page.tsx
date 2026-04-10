@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { BackHomeButton } from '@/components/BackHomeButton'
 
 const contactMethods = [
   {
@@ -45,6 +46,7 @@ export default function ContactPage() {
           <p className="section-copy">
             Se você quer discutir uma oportunidade, trocar uma ideia técnica ou entrar em contato sobre algum projeto, estes são os canais principais. Escolha o formato que fizer mais sentido para a conversa.
           </p>
+          <BackHomeButton />
         </div>
       </section>
 
