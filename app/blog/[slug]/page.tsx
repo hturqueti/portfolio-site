@@ -3,11 +3,14 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getSingletonHighlighter } from 'shiki'
 import { mdxComponents } from '@/components/mdx-components'
+import { transformObsidianCallouts } from '@/lib/mdx-callouts'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 
 function escapeRegExp(value: string) {
@@ -72,12 +75,12 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   }
 
   const { content } = await compileMDX({
-    source: stripLeadingTitleHeading(post.content, post.title),
+    source: transformObsidianCallouts(stripLeadingTitleHeading(post.content, post.title)),
     components: mdxComponents,
     options: {
       mdxOptions: {
-        remarkPlugins: [remarkGfm],
-        rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, [rehypePrettyCode, prettyCodeOptions]],
+        remarkPlugins: [remarkGfm, [remarkMath, { singleDollarTextMath: false }]],
+        rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeKatex, [rehypePrettyCode, prettyCodeOptions]],
       },
     },
   })

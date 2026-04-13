@@ -1,0 +1,198 @@
+---
+title: "Titulo do post"
+description: "Resumo curto para card, SEO e listagens."
+date: "2026-04-13"
+tags:
+  - exemplo
+  - mdx
+  - post
+image: "/images/posts/covers/exemplo-post.webp"
+imagePosition: "center"
+contentType: "post"
+featured: false
+featuredOrder: 99
+---
+
+# Heading 1
+
+Paragrafo comum com **negrito**, *italico*, ***negrito com italico***, ~~tachado~~ e `codigo inline`.
+
+Linha com [link interno](/blog) e [link externo](https://nextjs.org/).
+
+![Exemplo de imagem](/images/posts/covers/exemplo-post.webp)
+
+> Exemplo de blockquote para destacar uma observacao curta.
+
+<MdxCallout title="Exemplo de callout">
+  Use este componente para destacar notas, dicas, alertas e observacoes importantes.
+</MdxCallout>
+
+Callout no estilo Obsidian:
+
+> [!tip] Dica de escrita
+>
+> Callouts no estilo Obsidian agora funcionam no site com tipo, titulo e conteudo em markdown.
+>
+> - Aceitam listas
+> - Aceitam **formatacao**
+> - Aceitam multiplos paragrafos
+
+## Heading 2
+
+Lista nao ordenada:
+
+- item 1
+- item 2
+- item 3
+
+Lista ordenada:
+
+1. passo 1
+2. passo 2
+3. passo 3
+
+Checklist:
+
+- [x] item concluido
+- [ ] item pendente
+
+### Heading 3
+
+Tabela em GFM:
+
+| Coluna | Valor | Observacao |
+| --- | --- | --- |
+| A | 10 | Exemplo |
+| B | 20 | Outro exemplo |
+
+Bloco de codigo:
+
+```ts
+type PostSummary = {
+  title: string
+  tags: string[]
+}
+
+const post: PostSummary = {
+  title: 'Titulo do post',
+  tags: ['exemplo', 'mdx'],
+}
+```
+
+#### Heading 4
+
+Trecho em HTML/MDX quando precisar de mais controle:
+
+<details>
+  <summary>Expandir bloco opcional</summary>
+  <p>Este conteudo fica recolhido ate a interacao do leitor.</p>
+</details>
+
+Figura com legenda usando componente MDX:
+
+<MdxFigure
+  src="/images/posts/olist_erd.svg"
+  alt="Diagrama entidade-relacionamento das tabelas disponibilizadas no Kaggle"
+  caption="Diagrama entidade-relacionamento das tabelas disponibilizadas no Kaggle"
+/>
+
+##### Heading 5
+
+JSX simples dentro do conteudo:
+
+Exemplo 1, elementos com classes:
+
+<div className="tag-list">
+  <span className="tag">MDX</span>
+  <span className="tag">JSX</span>
+  <span className="tag">Conteudo</span>
+</div>
+
+Exemplo 2, HTML semantico embutido:
+
+<section>
+  <strong>Bloco renderizado via MDX</strong>
+  <p>Voce pode misturar HTML e markdown no mesmo arquivo.</p>
+</section>
+
+Exemplo 3, atributo React em elemento nativo:
+
+<div title="Tooltip simples renderizado pelo navegador">
+  Passe o mouse aqui para ver um title definido via JSX.
+</div>
+
+Exemplo 4, componente React registrado no projeto:
+
+<MdxCallout title="Componente reutilizavel">
+  Alem de HTML, voce pode usar componentes mapeados em <code>components/mdx-components.tsx</code>.
+</MdxCallout>
+
+Exemplo 5, callout recolhivel no estilo Obsidian:
+
+> [!warning]- Bloco recolhivel
+>
+> Use `+` para abrir por padrao e `-` para iniciar recolhido.
+
+Exemplo 6, todos os tipos principais de callout:
+
+> [!note] Note
+>
+> Exemplo do tipo `note`.
+
+> [!info] Info
+>
+> Exemplo do tipo `info`.
+
+> [!todo] Todo
+>
+> Exemplo do tipo `todo`.
+
+> [!question] Question
+>
+> Exemplo do tipo `question`.
+
+> [!example] Example
+>
+> Exemplo do tipo `example`.
+
+> [!abstract] Abstract
+>
+> Exemplo do tipo `abstract`.
+
+> [!quote] Quote
+>
+> Exemplo do tipo `quote`.
+
+> [!tip] Tip
+>
+> Exemplo do tipo `tip`.
+
+> [!success] Success
+>
+> Exemplo do tipo `success`.
+
+> [!warning] Warning
+>
+> Exemplo do tipo `warning`.
+
+> [!failure] Failure
+>
+> Exemplo do tipo `failure`.
+
+> [!danger] Danger
+>
+> Exemplo do tipo `danger`.
+
+> [!bug] Bug
+>
+> Exemplo do tipo `bug`.
+
+###### Heading 6
+
+Separador horizontal:
+
+---
+
+Rodape com nota de referencia.[^1]
+
+[^1]: Exemplo de nota de rodape suportada por `remark-gfm`.

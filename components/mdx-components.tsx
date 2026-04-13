@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import type { ComponentPropsWithoutRef } from 'react'
 import { MdxCallout } from '@/components/MdxCallout'
+import { MdxFigure } from '@/components/MdxFigure'
+import { MermaidDiagram } from '@/components/MermaidDiagram'
 import { MdxPre } from '@/components/MdxPre'
 import { PlotlyChart } from '@/components/PlotlyChart'
 
@@ -17,6 +19,8 @@ function MdxAnchor({ href = '', ...props }: AnchorProps) {
 export const mdxComponents = {
   a: MdxAnchor,
   MdxCallout,
+  MdxFigure,
+  MermaidDiagram,
   PlotlyChart,
   pre: MdxPre,
 }

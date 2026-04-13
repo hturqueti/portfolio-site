@@ -1,0 +1,170 @@
+---
+title: "Titulo do projeto"
+description: "Resumo objetivo do case, problema resolvido e impacto esperado."
+date: "2026-04-13"
+tags:
+  - projeto
+  - exemplo
+  - portfolio
+image: "/images/posts/covers/exemplo-projeto.webp"
+imagePosition: "center"
+contentType: "project"
+featured: true
+featuredOrder: 1
+stack:
+  - Python
+  - SQL
+  - Next.js
+results:
+  - "Resultado ou metrica principal"
+  - "Outro ganho relevante"
+---
+
+# Heading 1
+
+Resumo do projeto com **contexto**, *escopo*, ~~o que ficou fora~~ e `stack principal`.
+
+## Heading 2
+
+Contexto e objetivo:
+
+- qual problema existia;
+- quem era o publico ou area impactada;
+- qual meta o projeto buscava atingir.
+
+<MdxCallout title="Quando usar este formato">
+  Use `contentType: "project"` quando o conteudo precisar aparecer na pagina de projetos e puder se beneficiar de `stack`, `results` e `featured`.
+</MdxCallout>
+
+Callout no estilo Obsidian:
+
+> [!note] Contexto importante
+>
+> Use este formato quando precisar destacar uma ressalva, premissa ou limitacao do projeto.
+
+### Heading 3
+
+Imagem de capa ou ilustracao:
+
+![Mockup ou ilustracao do projeto](/images/posts/covers/exemplo-projeto.webp)
+
+Bloco de codigo:
+
+```python
+def calcular_roi(receita_incremental: float, custo_total: float) -> float:
+    return (receita_incremental - custo_total) / custo_total
+
+
+print(round(calcular_roi(125000, 40000), 2))
+```
+
+#### Heading 4
+
+Tabela para comparacao de antes e depois:
+
+| Indicador | Antes | Depois |
+| --- | --- | --- |
+| SLA | 48h | 12h |
+| Conversao | 3.2% | 4.9% |
+| Custo | R$ 15 mil | R$ 9 mil |
+
+##### Heading 5
+
+Checklist de entregas:
+
+- [x] definicao do problema
+- [x] implementacao da solucao
+- [x] mensuracao de resultado
+- [ ] proximo experimento
+
+###### Heading 6
+
+Outros blocos uteis:
+
+> Blockquote curto para aprendizados, ressalvas ou conclusoes.
+
+1. etapa de descoberta
+2. etapa de execucao
+3. etapa de validacao
+
+```sql
+select segmento, avg(churn_score) as score_medio
+from clientes
+group by segmento
+order by score_medio desc;
+```
+
+<details>
+  <summary>Expandir bastidores da implementacao</summary>
+  <p>Use este bloco para observacoes tecnicas, trade-offs e proximos passos.</p>
+</details>
+
+<PlotlyChart
+  src="titulo-do-projeto/indicador-principal-por-segmento.json"
+  alt="Grafico interativo de exemplo para projetos"
+  caption="Exemplo de grafico interativo com legenda usando o componente PlotlyChart."
+/>
+
+> [!success]+ Resultado em destaque
+>
+> Callouts tambem funcionam bem para destacar resultado principal, impacto ou decisao recomendada.
+
+Todos os tipos principais de callout:
+
+> [!note] Note
+>
+> Exemplo do tipo `note`.
+
+> [!info] Info
+>
+> Exemplo do tipo `info`.
+
+> [!todo] Todo
+>
+> Exemplo do tipo `todo`.
+
+> [!question] Question
+>
+> Exemplo do tipo `question`.
+
+> [!example] Example
+>
+> Exemplo do tipo `example`.
+
+> [!abstract] Abstract
+>
+> Exemplo do tipo `abstract`.
+
+> [!quote] Quote
+>
+> Exemplo do tipo `quote`.
+
+> [!tip] Tip
+>
+> Exemplo do tipo `tip`.
+
+> [!success] Success
+>
+> Exemplo do tipo `success`.
+
+> [!warning] Warning
+>
+> Exemplo do tipo `warning`.
+
+> [!failure] Failure
+>
+> Exemplo do tipo `failure`.
+
+> [!danger] Danger
+>
+> Exemplo do tipo `danger`.
+
+> [!bug] Bug
+>
+> Exemplo do tipo `bug`.
+
+Separador horizontal:
+
+---
+
+Links finais: [ver blog](/blog) e [documentacao externa](https://developer.mozilla.org/).

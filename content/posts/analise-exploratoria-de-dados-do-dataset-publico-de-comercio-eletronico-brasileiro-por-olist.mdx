@@ -1,0 +1,213 @@
+---
+title: "Análise exploratória de dados do dataset público de comércio eletrônico brasileiro, por Olist"
+description: "A Olist é uma empresa brasileira de tecnologia fundada em 2015 que oferece como serviço para o varejo soluções de gestão de e-commerce e a disponibilização de produtos de lojist..."
+date: "2024-12-24"
+tags:
+  - eda
+  - kaggle
+  - machine-learning
+  - nlp
+  - python
+image: "/images/posts/analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/diagrama-entidade-relacionamento-das-tabelas-disponibilizadas-no-kaggle.svg"
+contentType: "project"
+featured: true
+featuredOrder: 1
+stack:
+  - Python
+  - SQL
+  - Plotly
+  - NLP
+results:
+  - "A região sudeste concentra os maiores volumes de pedidos e valores pagos, com destaque para SP, RJ e MG"
+  - "A base indica baixa recorrência de compra, com 61,1% dos clientes inativos e quase 97% realizando apenas um pedido"
+  - "A receita total por cliente é concentrada em valores baixos, com 78% acumulando até R$ 200 em compras"
+  - "Avaliações sem comentário são mais frequentes em notas altas e diminuem conforme a nota cai"
+  - "Comentários positivos aumentam com notas maiores, enquanto os negativos se concentram nas notas baixas"
+---
+
+A Olist é uma empresa brasileira de tecnologia fundada em 2015 que oferece como serviço para o varejo soluções de gestão de *e-commerce* e a disponibilização de produtos de lojistas em diferentes *marketplaces*. Em 2018, a Olist [disponibilizou no Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/) uma base de dados anonimizada de uma amostra das vendas ocorridas desde o final de 2016 até agosto de 2018, possibilitando diversos tipos de análises.
+
+Nesse artigo eu irei fazer uma análise exploratória de dados (EDA) usando unicamente as informações disponibilizadas pela empresa, incluindo a análise de sentimento dos textos dos comentários deixados pelos clientes.
+
+Todo o código usado para gerar as informações desse artigo foram disponibilizados no meu GitHub no [repositório olist-brazilian-ecommerce-analysis](https://github.com/hturqueti/olist-brazilian-ecommerce-analysis) (em inglês).
+
+# Modelagem dos dados
+
+O primeiro passo da análise é entender qual é o relacionamento entre os diferentes arquivos de dados disponibilizados pela Olist. Esse passo permitirá o cruzamento correto das bases ao longo da nossa análise.
+
+Com o auxílio da ferramenta online [dbdiagram](https://dbdiagram.io/d/), eu mapeei as 9 tabelas disponibilizadas no Kaggle com as informações dos nomes dos campos e seus respectivos tipos de dados.
+
+<MdxFigure
+  src="/images/posts/analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/diagrama-entidade-relacionamento-das-tabelas-disponibilizadas-no-kaggle.svg"
+  alt="Diagrama entidade-relacionamento das tabelas disponibilizadas no Kaggle"
+  caption="Diagrama entidade-relacionamento das tabelas disponibilizadas no Kaggle"
+/>
+
+Sobre a forma que os dados foram disponibilizados, gostaria de compartilhar dois pontos que eu acho importantes para os cruzamentos que serão feitos ao longo da análise:
+
+-   Na tabela "olist_customers", temos os atributos "customer_id" e "customer_unique_id" que parecem ambíguos em um primeiro momento, mas a explicação é que um usuário possui um único "customer_unique_id" e, a cada compra feita, é gerado um novo "customer_id";
+-   Já na tabela "olist_geolocoation", não existe uma chave primária pelo CEP (chamado de "zip_code_prefix"). Como o CEP é truncado mantendo apenas os 5 primeiros dígitos, existem repetições na base que levam a diferentes valores de latitude e longitude. Mais para frente eu mostrarei como lidamos com um caso como esse.
+
+# Análise exploratória de dados
+
+## Quantidade de compras e valores totais pagos por estado e *status* da compra
+
+Será que os dados disponibilizados pela Olist mostram concentração de valores monetários em algum estado ou região específica do Brasil? Esse comportamento é o mesmo para a quantidade de compras feitas?
+
+Para responder essa pergunta, iremos ver agora um gráfico que mostra o valor total dos pagamentos e a contagem de compras distintas por estado e *status* do pedido.
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/valores-e-quantidade-de-compras-por-estado-e-status.json"
+  alt="Gráfico com a soma dos valores pagos e a contagem de compras feitas agrupadas pelo estado do cliente e o *status* do pedido"
+  caption="Gráfico com a soma dos valores pagos e a contagem de compras feitas agrupadas pelo estado do cliente e o *status* do pedido"
+/>
+
+Pelo gráfico anterior é possível ver que tanto os três maiores valores totais pagos quanto a quantidade total de pedidos são de estados da região sudeste do Brasil: São Paulo (SP), Rio de Janeiro (RJ) e Minas Gerais (MG).
+
+## Origem e destino das compras por região do Brasil
+
+O gráfico anterior mostra uma visão focada apenas no cliente, mas e qual será a região responsável pela maior parte da origem dos produtos? Existe uma concentração em uma região do cliente a depender da região do vendedor? Para isso, foi feito o gráfico de Sankey abaixo que permite contabilizar a quantidade de vendas agrupando tanto pela região do vendedor quanto pela região do cliente.
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/fluxo-de-compras-por-regiao-do-vendedor-e-do-cliente.json"
+  alt="Gráfico de Sankey mostrando a quantidade de vendas por região do comprador e do cliente"
+  caption="Gráfico de Sankey mostrando a quantidade de vendas por região do comprador e do cliente"
+/>
+
+Além do sudeste ser a região dos clientes com a maior quantidade de pedidos, ela é responsável também pelo suprimento de quase todos os pedidos feitos por clientes das outras regiões. Podemos destacar também a participação da região sul como 2ª região principal no fornecimento de produtos para o sudeste, destoando das regiões nordeste, centro-oeste e norte.
+
+## Distribuição espacial dos clientes e vendedores
+
+Os gráficos mostrados anteriormente consideravam ou a quantidade de vendas ou o valor total pago pelo cliente, mas como se distribuem os clientes e vendedores (distintos) pelo país? Para saber a localização aproximada dos primeiros 5 dígitos dos CEPs da tabela "olist_geolocation" a média da latitude e da longitude agrupado pelo atributo "geolocation_zip_code_prefix". Com isso agora existe apenas uma coordenada geográfica para cada prefixo de CEP, sendo possível relacionar ela tanto com os clientes quanto com os vendedores.
+
+Os mapas de densidade a seguir irão mostrar essas informações, respectivamente:
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/mapa-de-densidade-de-clientes.json"
+  alt="Mapa de densidade dos clientes pelo país"
+  caption="Mapa de densidade dos clientes pelo país"
+/>
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/mapa-de-densidade-de-vendedores.json"
+  alt="Mapa de densidade dos vendedores pelo país"
+  caption="Mapa de densidade dos vendedores pelo país"
+/>
+
+Analisando os dois mapas de densidade podemos confirmar a concentração tanto de clientes quanto de vendedores na região sudeste. Entretanto, essa concentração é ainda maior ao considerar apenas os vendedores.
+
+## Tendência de vendas pelas principais categorias de produtos
+
+Considerando que temos um histórico de quase 2 anos de dados amostrais de vendas, conseguimos ver qual é a tendência das
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/tendencia-de-vendas-das-principais-categorias.json"
+  alt="Gráfico de linha mostrando a tendência de venda das principais categorias de produtos"
+  caption="Gráfico de linha mostrando a tendência de venda das principais categorias de produtos"
+/>
+
+Com exceção de categorias menos significativas que foram agrupadas em "outros", a categoria de artigos para a casa lidera a quantidade total de compras feitas na base de dados, mostrado um pico no mês de nov/2017 (onde ocorre a Black Friday).
+
+É possível perceber também uma tendência no aumento da quantidade total de vendas ao longo de 2017 com uma estabilização nos meses de 2018. Lembrando que esses dados podem não representar a realidade dos *marketplaces* devido ao processo de amostragem dos dados disponibilizados.
+
+## Métricas de clientes
+
+Aqui iremos explorar um pouco algumas métricas calculadas para os clientes PF do varejo.
+
+### Recência
+
+A recência pode ser definida como a quantidade de dias passados desde a última compra feita por um cliente.
+
+Devido ao comportamento anômalo dos dados dos últimos meses da base "olist_orders", foram filtrados apenas as compras feitas até o mês de ago/2018 e a recência foi calculada com base na data de 31/08/2018. A seguir, podemos ver um histograma da quantidade de clientes pela quantidade de dias desde o seu último pedido.
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/histograma-de-recencia-dos-clientes.json"
+  alt="Histograma da contagem de clientes únicos pela quantidade de dias desde a sua última compra (recência)"
+  caption="Histograma da contagem de clientes únicos pela quantidade de dias desde a sua última compra (recência)"
+/>
+
+Os clientes situados na área azul do gráfico são aqueles que fizeram sua última compra há menos de 180 dias, enquanto os clientes na região vermelha fizeram sua última compra 180 dias atrás ou antes. Pela amostra de dados que temos é possível perceber uma tendência dos clientes fazerem o cadastro para comprar um produto mas não manter um hábito de compras frequentes na plataforma.
+
+Outro ponto importante de se observar é que o maior pico de clientes, com recência entre 275 e 284 dias, fez sua última compra na semana da Black Friday de 2017, no ano anterior à data de referência. Por se tratar de uma quantidade significativa da base de clientes da plataforma, que agora estão inativos, seria interessante fazer alguma ação de marketing focado nesse público para reativá-los.
+
+### Churn
+
+Como vimos no histograma de recência anteriormente, a maior parte dos clientes da base se encontram "inativos", ou seja, não realizaram uma compra nos últimos X dias. Aqui definimos essa quantidade X como 180 dias (ou seja, quase 6 meses).
+
+Calculando a proporção de clientes em cada uma das situações, vemos que apenas 39,9% dos clientes (38.309) encontram-se "ativos" na plataforma, enquanto os 61,1% demais (57.781) não fizeram nenhuma compra nesse período.
+
+### Frequência
+
+Dados os quase 100 mil pedidos que temos registrados nas bases, como eles são distribuídos pela quantidade de clientes na base? Vamos agora calcular a frequência de cada cliente, que nada mais é que a contagem de pedidos feitos por cada um deles. Abaixo é mostrado o histograma da frequência e a contagem de clientes únicos da plataforma.
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/histograma-de-frequencia-de-pedidos-por-cliente.json"
+  alt="Histograma da distribuição de frequência de pedidos por clientes"
+  caption="Histograma da distribuição de frequência de pedidos por clientes"
+/>
+
+Do gráfico anterior vimos que, pela base de dados disponibilizada, quase 97% dos clientes fizeram uma única compra na plataforma em todo o período analisado, novamente trazendo o ponto de que o processo de amostragem pode não representar fielmente a base de clientes da Olist.
+
+### Receita total
+
+A receita total do cliente é definida como o total pago por ele pelos produtos em todas as suas compras na plataforma. Como temos uma baixa frequência por cliente é esperado também que a receita total deles não tenha um valor muito elevado. A seguir veremos a distribuição da contagem total de clientes únicos pela receita total.
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/histograma-de-receita-total-por-cliente.json"
+  alt="Histograma da distribuição de receita total por clientes"
+  caption="Histograma da distribuição de receita total por clientes"
+/>
+
+Essa distribuição altamente assimétrica mostra uma concentração de receita total por cliente em valores mais baixos, geralmente de até R$ 200,00. Além da possibilidade de realizar um zoom no próprio gráfico interativo acima, para visualizar melhor qual é a proporção de clientes que possuem essa receita total até o valor de R$ 200,00 iremos plotar um gráfico de distribuição de frequência acumulada.
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/distribuicao-acumulada-da-receita-total-por-cliente.json"
+  alt="Gráfico de distribuição acumulada de receita total (limitada a R$ 1.000,00)"
+  caption="Gráfico de distribuição acumulada de receita total (limitada a R$ 1.000,00)"
+/>
+
+Do gráfico anterior é possível confirmar que 78% dos clientes possuem uma receita total acumulada de até R$200. Além disso, receitas totais acima de R$ 915,00 representam menos de 1% dos clientes.
+
+## Análise dos comentários
+
+Dado que o nosso *dataset* possui informações de quase 100 mil compras, qual é o volume de comentários que precisamos analisar? Lembrando que o cliente pode não deixar uma avaliação ou então deixar apenas a nota de 1 a 5 estrelas, mas sem o comentário. Para saber melhor qual é o comportamento de avaliação dos clientes ao realizarem uma compra na Olist, vamos analisar o gráfico de *waterfall* abaixo.
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/waterfall-de-avaliacoes-e-comentarios-dos-pedidos.json"
+  alt="Gráfico de *waterfall* mostrando a quantidade total de compras, de compras que não foram avaliadas, das avaliadas sem comentário e, por fim, das que foram avaliadas e possuem um comentário"
+  caption="Gráfico de *waterfall* mostrando a quantidade total de compras, de compras que não foram avaliadas, das avaliadas sem comentário e, por fim, das que foram avaliadas e possuem um comentário"
+/>
+
+Do gráfico anterior vemos que praticamente todas as compras possuem a avaliação em estrelas feitas pelos clientes, entretanto, mais da metade das compras não possui nenhum comentário, reduzindo a quantidade total para quase 41 mil comentários. Apesar de ser impossível avaliar esses comentários de forma manual, esse volume ainda nos permite extrair alguns *insights* usando um modelo de classificação de sentimentos.
+
+O passo a passo mais detalhado de como utilizar um modelo pré-treinado da plataforma Hugging Face pode ser encontrado no meu último artigo [Modelos pré-treinados para tarefas de ciência de dados](/blog/modelos-pre-treinados-para-tarefas-de-ciencia-de-dados), onde mostro como instalar as bibliotecas necessárias e baixar o modelo para essa situação.
+
+Após a aplicação do modelo `pysentimiento/bertweet-pt-sentiment` na nossa base de comentários, cada um deles foi classificado em "negativo", "neutro" e "positivo". Como é a distribuição desses sentimos em relação à nota dada pelo cliente?
+
+<PlotlyChart
+  src="analise-exploratoria-de-dados-do-dataset-publico-de-comercio-eletronico-brasileiro-por-olist/distribuicao-de-sentimentos-por-nota.json"
+  alt="Distribuição dos sentimentos dos comentários agrupada pela nota dada pelos clientes"
+  caption="Distribuição dos sentimentos dos comentários agrupada pela nota dada pelos clientes"
+/>
+
+Podemos extrair algumas informações interessantes desse gráfico de barras. A primeira é que a proporção de avaliações sem comentários é inversamente proporcional à nota dada pelo cliente. Ou seja, quando as pessoas estão muito satisfeitas elas tendem a deixar menos comentários do que em pedidos que elas tiveram algum problema e deram notas baixas.
+
+Em segundo lugar, como esperado, a proporção de comentários positivos é proporcional à nota, enquanto os comentários negativos são inversamente proporcionais à nota.
+
+------------------------------------------------------------------------
+
+Essa análise exploratória de dados permitiu conhecer um pouco mais sobre o famoso *dataset* da Olist e o comportamento dos clientes no período disponibilizado. Por não ser uma análise exaustiva, é possível explorar alguns outros pontos, tais como:
+
+-   Atrasos nas entregas
+    -   Leva a uma quantidade maior de notas baixas e quantidade nas entregas?
+    -   Quais tipos de produtos possuem uma proporção maior de atrasos?
+    -   Em quais regiões (tanto do vendedor quanto do cliente) isso ocorre?
+-   Valor do frete
+    -   O quanto ele representa do total pago pelo cliente no pedido?
+    -   Pedidos similares (produto, dimensões, distância entre cliente e vendedor) com preços de frete diferentes levam a tempos de entrega diferentes?
+-   Métodos de pagamento
+    -   Quais formas de pagamento são mais presentes nas compras da plataforma?
+    -   As compras geralmente são parceladas? Isso varia de acordo com o valor pago?
+    -   Qual é o comportamento (categoria de produtos, % de desconto, tipos de clientes) no uso de cupons de desconto?
+
+E você, já analisou esse *dataset* alguma vez? Quais informações conseguiu extrair dos dados?

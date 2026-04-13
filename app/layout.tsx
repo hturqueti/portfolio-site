@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import 'katex/dist/katex.min.css'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -6,6 +7,10 @@ import { Footer } from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Henrique M Turqueti',
   description: 'Portfólio de projetos, estudos e posts sobre ciência de dados e analytics.',
+  icons: {
+    icon: '/images/branding/favicon.ico',
+    shortcut: '/images/branding/favicon.ico',
+  },
 }
 
 export default function RootLayout({

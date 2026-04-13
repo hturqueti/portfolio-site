@@ -1,0 +1,5042 @@
+{
+  "data": [
+    {
+      "colorbar": {
+        "outlinecolor": "rgba(0,0,0,0)"
+      },
+      "customdata": [
+        [
+          "rio branco",
+          "AC"
+        ],
+        [
+          "manaus",
+          "AM"
+        ],
+        [
+          "arraial d'ajuda",
+          "BA"
+        ],
+        [
+          "barro alto",
+          "BA"
+        ],
+        [
+          "eunapolis",
+          "BA"
+        ],
+        [
+          "feira de santana",
+          "BA"
+        ],
+        [
+          "guanambi",
+          "BA"
+        ],
+        [
+          "ilheus",
+          "BA"
+        ],
+        [
+          "ipira",
+          "BA"
+        ],
+        [
+          "irece",
+          "BA"
+        ],
+        [
+          "lauro de freitas",
+          "BA"
+        ],
+        [
+          "paulo afonso",
+          "BA"
+        ],
+        [
+          "porto seguro",
+          "BA"
+        ],
+        [
+          "salvador",
+          "BA"
+        ],
+        [
+          "caucaia",
+          "CE"
+        ],
+        [
+          "eusebio",
+          "CE"
+        ],
+        [
+          "fortaleza",
+          "CE"
+        ],
+        [
+          "juazeiro do norte",
+          "CE"
+        ],
+        [
+          "mucambo",
+          "CE"
+        ],
+        [
+          "pacatuba",
+          "CE"
+        ],
+        [
+          "varzea alegre",
+          "CE"
+        ],
+        [
+          "brasilia",
+          "DF"
+        ],
+        [
+          "brasília",
+          "DF"
+        ],
+        [
+          "ceilandia",
+          "DF"
+        ],
+        [
+          "afonso claudio",
+          "ES"
+        ],
+        [
+          "cachoeiro de itapemirim",
+          "ES"
+        ],
+        [
+          "cariacica",
+          "ES"
+        ],
+        [
+          "colatina",
+          "ES"
+        ],
+        [
+          "domingos martins",
+          "ES"
+        ],
+        [
+          "muqui",
+          "ES"
+        ],
+        [
+          "serra",
+          "ES"
+        ],
+        [
+          "viana",
+          "ES"
+        ],
+        [
+          "vila velha",
+          "ES"
+        ],
+        [
+          "vitoria",
+          "ES"
+        ],
+        [
+          "vitória",
+          "ES"
+        ],
+        [
+          "abadia de goias",
+          "GO"
+        ],
+        [
+          "anapolis",
+          "GO"
+        ],
+        [
+          "aparecida de goiania",
+          "GO"
+        ],
+        [
+          "formosa",
+          "GO"
+        ],
+        [
+          "goiania",
+          "GO"
+        ],
+        [
+          "goiânia",
+          "GO"
+        ],
+        [
+          "jaragua",
+          "GO"
+        ],
+        [
+          "luziania",
+          "GO"
+        ],
+        [
+          "morrinhos",
+          "GO"
+        ],
+        [
+          "piracanjuba",
+          "GO"
+        ],
+        [
+          "rio verde",
+          "GO"
+        ],
+        [
+          "santa terezinha de goiás",
+          "GO"
+        ],
+        [
+          "uruacu",
+          "GO"
+        ],
+        [
+          "são luís",
+          "MA"
+        ],
+        [
+          "alfenas",
+          "MG"
+        ],
+        [
+          "andradas",
+          "MG"
+        ],
+        [
+          "araguari",
+          "MG"
+        ],
+        [
+          "araxa",
+          "MG"
+        ],
+        [
+          "arinos",
+          "MG"
+        ],
+        [
+          "baependi",
+          "MG"
+        ],
+        [
+          "barbacena",
+          "MG"
+        ],
+        [
+          "belo horizonte",
+          "MG"
+        ],
+        [
+          "betim",
+          "MG"
+        ],
+        [
+          "bonfinopolis de minas",
+          "MG"
+        ],
+        [
+          "borda da mata",
+          "MG"
+        ],
+        [
+          "camanducaia",
+          "MG"
+        ],
+        [
+          "campanha",
+          "MG"
+        ],
+        [
+          "campo do meio",
+          "MG"
+        ],
+        [
+          "caratinga",
+          "MG"
+        ],
+        [
+          "carmo da mata",
+          "MG"
+        ],
+        [
+          "carmo do cajuru",
+          "MG"
+        ],
+        [
+          "cataguases",
+          "MG"
+        ],
+        [
+          "claudio",
+          "MG"
+        ],
+        [
+          "congonhal",
+          "MG"
+        ],
+        [
+          "congonhas",
+          "MG"
+        ],
+        [
+          "conselheiro lafaiete",
+          "MG"
+        ],
+        [
+          "contagem",
+          "MG"
+        ],
+        [
+          "coronel fabriciano",
+          "MG"
+        ],
+        [
+          "divinopolis",
+          "MG"
+        ],
+        [
+          "divisa nova",
+          "MG"
+        ],
+        [
+          "dores de campos",
+          "MG"
+        ],
+        [
+          "extrema",
+          "MG"
+        ],
+        [
+          "formiga",
+          "MG"
+        ],
+        [
+          "fronteira",
+          "MG"
+        ],
+        [
+          "governador valadares",
+          "MG"
+        ],
+        [
+          "guanhaes",
+          "MG"
+        ],
+        [
+          "guiricema",
+          "MG"
+        ],
+        [
+          "ibia",
+          "MG"
+        ],
+        [
+          "ibirité",
+          "MG"
+        ],
+        [
+          "ilicinea",
+          "MG"
+        ],
+        [
+          "ipatinga",
+          "MG"
+        ],
+        [
+          "itabira",
+          "MG"
+        ],
+        [
+          "itau de minas",
+          "MG"
+        ],
+        [
+          "itauna",
+          "MG"
+        ],
+        [
+          "jacutinga",
+          "MG"
+        ],
+        [
+          "janaúba",
+          "MG"
+        ],
+        [
+          "joao monlevade",
+          "MG"
+        ],
+        [
+          "joao pinheiro",
+          "MG"
+        ],
+        [
+          "juiz de fora",
+          "MG"
+        ],
+        [
+          "lagoa da prata",
+          "MG"
+        ],
+        [
+          "lagoa santa",
+          "MG"
+        ],
+        [
+          "lambari",
+          "MG"
+        ],
+        [
+          "mateus leme",
+          "MG"
+        ],
+        [
+          "monte siao",
+          "MG"
+        ],
+        [
+          "montes claros",
+          "MG"
+        ],
+        [
+          "muriae",
+          "MG"
+        ],
+        [
+          "nova lima",
+          "MG"
+        ],
+        [
+          "oliveira",
+          "MG"
+        ],
+        [
+          "ouro fino",
+          "MG"
+        ],
+        [
+          "ouro preto",
+          "MG"
+        ],
+        [
+          "para de minas",
+          "MG"
+        ],
+        [
+          "passos",
+          "MG"
+        ],
+        [
+          "patos de minas",
+          "MG"
+        ],
+        [
+          "pedro leopoldo",
+          "MG"
+        ],
+        [
+          "pocos de caldas",
+          "MG"
+        ],
+        [
+          "ponte nova",
+          "MG"
+        ],
+        [
+          "porto firme",
+          "MG"
+        ],
+        [
+          "pouso alegre",
+          "MG"
+        ],
+        [
+          "prados",
+          "MG"
+        ],
+        [
+          "ribeirao das neves",
+          "MG"
+        ],
+        [
+          "sabara",
+          "MG"
+        ],
+        [
+          "santa rita do sapucai",
+          "MG"
+        ],
+        [
+          "sao joao del rei",
+          "MG"
+        ],
+        [
+          "sete lagoas",
+          "MG"
+        ],
+        [
+          "teofilo otoni",
+          "MG"
+        ],
+        [
+          "timoteo",
+          "MG"
+        ],
+        [
+          "tiradentes",
+          "MG"
+        ],
+        [
+          "tocantins",
+          "MG"
+        ],
+        [
+          "tres coracoes",
+          "MG"
+        ],
+        [
+          "uba",
+          "MG"
+        ],
+        [
+          "uberaba",
+          "MG"
+        ],
+        [
+          "uberlandia",
+          "MG"
+        ],
+        [
+          "uberlândia",
+          "MG"
+        ],
+        [
+          "varginha",
+          "MG"
+        ],
+        [
+          "vespasiano",
+          "MG"
+        ],
+        [
+          "vicosa",
+          "MG"
+        ],
+        [
+          "campo grande",
+          "MS"
+        ],
+        [
+          "coxim",
+          "MS"
+        ],
+        [
+          "cuiaba",
+          "MT"
+        ],
+        [
+          "jaciara",
+          "MT"
+        ],
+        [
+          "sinop",
+          "MT"
+        ],
+        [
+          "campina grande",
+          "PB"
+        ],
+        [
+          "joao pessoa",
+          "PB"
+        ],
+        [
+          "mamanguape",
+          "PB"
+        ],
+        [
+          "sao bento",
+          "PB"
+        ],
+        [
+          "serra redonda",
+          "PB"
+        ],
+        [
+          "brejão",
+          "PE"
+        ],
+        [
+          "caruaru",
+          "PE"
+        ],
+        [
+          "recife",
+          "PE"
+        ],
+        [
+          "vitoria de santo antao",
+          "PE"
+        ],
+        [
+          "teresina",
+          "PI"
+        ],
+        [
+          "almirante tamandare",
+          "PR"
+        ],
+        [
+          "ampere",
+          "PR"
+        ],
+        [
+          "apucarana",
+          "PR"
+        ],
+        [
+          "arapongas",
+          "PR"
+        ],
+        [
+          "araucaria",
+          "PR"
+        ],
+        [
+          "bandeirantes",
+          "PR"
+        ],
+        [
+          "barra do jacare",
+          "PR"
+        ],
+        [
+          "bocaiuva do sul",
+          "PR"
+        ],
+        [
+          "california",
+          "PR"
+        ],
+        [
+          "cambe",
+          "PR"
+        ],
+        [
+          "campo largo",
+          "PR"
+        ],
+        [
+          "campo magro",
+          "PR"
+        ],
+        [
+          "campo mourao",
+          "PR"
+        ],
+        [
+          "cascavel",
+          "PR"
+        ],
+        [
+          "castro",
+          "PR"
+        ],
+        [
+          "cianorte",
+          "PR"
+        ],
+        [
+          "colombo",
+          "PR"
+        ],
+        [
+          "colorado",
+          "PR"
+        ],
+        [
+          "cornelio procopio",
+          "PR"
+        ],
+        [
+          "curitiba",
+          "PR"
+        ],
+        [
+          "entre rios do oeste",
+          "PR"
+        ],
+        [
+          "fazenda rio grande",
+          "PR"
+        ],
+        [
+          "floresta",
+          "PR"
+        ],
+        [
+          "formosa do oeste",
+          "PR"
+        ],
+        [
+          "foz do iguacu",
+          "PR"
+        ],
+        [
+          "francisco beltrao",
+          "PR"
+        ],
+        [
+          "goioere",
+          "PR"
+        ],
+        [
+          "guaira",
+          "PR"
+        ],
+        [
+          "guarapuava",
+          "PR"
+        ],
+        [
+          "guaratuba",
+          "PR"
+        ],
+        [
+          "imbituva",
+          "PR"
+        ],
+        [
+          "irati",
+          "PR"
+        ],
+        [
+          "itaipulandia",
+          "PR"
+        ],
+        [
+          "japira",
+          "PR"
+        ],
+        [
+          "jussara",
+          "PR"
+        ],
+        [
+          "laranjeiras do sul",
+          "PR"
+        ],
+        [
+          "loanda",
+          "PR"
+        ],
+        [
+          "londrina",
+          "PR"
+        ],
+        [
+          "mandaguacu",
+          "PR"
+        ],
+        [
+          "mandaguari",
+          "PR"
+        ],
+        [
+          "mandirituba",
+          "PR"
+        ],
+        [
+          "marechal candido rondon",
+          "PR"
+        ],
+        [
+          "marialva",
+          "PR"
+        ],
+        [
+          "maringa",
+          "PR"
+        ],
+        [
+          "maringá",
+          "PR"
+        ],
+        [
+          "medianeira",
+          "PR"
+        ],
+        [
+          "paicandu",
+          "PR"
+        ],
+        [
+          "palotina",
+          "PR"
+        ],
+        [
+          "paranavai",
+          "PR"
+        ],
+        [
+          "pato bragado",
+          "PR"
+        ],
+        [
+          "pato branco",
+          "PR"
+        ],
+        [
+          "pinhais",
+          "PR"
+        ],
+        [
+          "pinhalao",
+          "PR"
+        ],
+        [
+          "pitanga",
+          "PR"
+        ],
+        [
+          "ponta grossa",
+          "PR"
+        ],
+        [
+          "rolandia",
+          "PR"
+        ],
+        [
+          "santa terezinha de itaipu",
+          "PR"
+        ],
+        [
+          "sao jose dos pinhais",
+          "PR"
+        ],
+        [
+          "sarandi",
+          "PR"
+        ],
+        [
+          "sertanópolis",
+          "PR"
+        ],
+        [
+          "teixeira soares",
+          "PR"
+        ],
+        [
+          "terra boa",
+          "PR"
+        ],
+        [
+          "toledo",
+          "PR"
+        ],
+        [
+          "umuarama",
+          "PR"
+        ],
+        [
+          "uniao da vitoria",
+          "PR"
+        ],
+        [
+          "angra dos reis",
+          "RJ"
+        ],
+        [
+          "aperibe",
+          "RJ"
+        ],
+        [
+          "armacao dos buzios",
+          "RJ"
+        ],
+        [
+          "barra mansa",
+          "RJ"
+        ],
+        [
+          "belford roxo",
+          "RJ"
+        ],
+        [
+          "boa esperança",
+          "RJ"
+        ],
+        [
+          "bom jardim",
+          "RJ"
+        ],
+        [
+          "campos dos goytacazes",
+          "RJ"
+        ],
+        [
+          "duque de caxias",
+          "RJ"
+        ],
+        [
+          "itaboraí",
+          "RJ"
+        ],
+        [
+          "macae",
+          "RJ"
+        ],
+        [
+          "mage",
+          "RJ"
+        ],
+        [
+          "marica",
+          "RJ"
+        ],
+        [
+          "mesquita",
+          "RJ"
+        ],
+        [
+          "nilopolis",
+          "RJ"
+        ],
+        [
+          "nilópolis",
+          "RJ"
+        ],
+        [
+          "niteroi",
+          "RJ"
+        ],
+        [
+          "niterói",
+          "RJ"
+        ],
+        [
+          "nova friburgo",
+          "RJ"
+        ],
+        [
+          "nova iguacu",
+          "RJ"
+        ],
+        [
+          "nova iguaçu",
+          "RJ"
+        ],
+        [
+          "paracambi",
+          "RJ"
+        ],
+        [
+          "paraiba do sul",
+          "RJ"
+        ],
+        [
+          "petropolis",
+          "RJ"
+        ],
+        [
+          "petrópolis",
+          "RJ"
+        ],
+        [
+          "queimados",
+          "RJ"
+        ],
+        [
+          "resende",
+          "RJ"
+        ],
+        [
+          "rio bonito",
+          "RJ"
+        ],
+        [
+          "rio de janeiro",
+          "RJ"
+        ],
+        [
+          "santo antonio de padua",
+          "RJ"
+        ],
+        [
+          "sao goncalo",
+          "RJ"
+        ],
+        [
+          "sao joao de meriti",
+          "RJ"
+        ],
+        [
+          "sao pedro da aldeia",
+          "RJ"
+        ],
+        [
+          "saquarema",
+          "RJ"
+        ],
+        [
+          "são joão de meriti",
+          "RJ"
+        ],
+        [
+          "teresopolis",
+          "RJ"
+        ],
+        [
+          "tres rios",
+          "RJ"
+        ],
+        [
+          "vassouras",
+          "RJ"
+        ],
+        [
+          "volta redonda",
+          "RJ"
+        ],
+        [
+          "messias targino",
+          "RN"
+        ],
+        [
+          "natal",
+          "RN"
+        ],
+        [
+          "parnamirim",
+          "RN"
+        ],
+        [
+          "ji-parana",
+          "RO"
+        ],
+        [
+          "porto velho",
+          "RO"
+        ],
+        [
+          "alvorada",
+          "RS"
+        ],
+        [
+          "arvorezinha",
+          "RS"
+        ],
+        [
+          "bagé",
+          "RS"
+        ],
+        [
+          "bento goncalves",
+          "RS"
+        ],
+        [
+          "cachoeira do sul",
+          "RS"
+        ],
+        [
+          "cachoeirinha",
+          "RS"
+        ],
+        [
+          "campina das missoes",
+          "RS"
+        ],
+        [
+          "campo bom",
+          "RS"
+        ],
+        [
+          "canoas",
+          "RS"
+        ],
+        [
+          "carazinho",
+          "RS"
+        ],
+        [
+          "caxias do sul",
+          "RS"
+        ],
+        [
+          "condor",
+          "RS"
+        ],
+        [
+          "erechim",
+          "RS"
+        ],
+        [
+          "estancia velha",
+          "RS"
+        ],
+        [
+          "farroupilha",
+          "RS"
+        ],
+        [
+          "flores da cunha",
+          "RS"
+        ],
+        [
+          "horizontina",
+          "RS"
+        ],
+        [
+          "igrejinha",
+          "RS"
+        ],
+        [
+          "imbe",
+          "RS"
+        ],
+        [
+          "imigrante",
+          "RS"
+        ],
+        [
+          "ipe",
+          "RS"
+        ],
+        [
+          "ivoti",
+          "RS"
+        ],
+        [
+          "jacutinga",
+          "RS"
+        ],
+        [
+          "lajeado",
+          "RS"
+        ],
+        [
+          "montenegro",
+          "RS"
+        ],
+        [
+          "nova petrópolis",
+          "RS"
+        ],
+        [
+          "novo hamburgo",
+          "RS"
+        ],
+        [
+          "parai",
+          "RS"
+        ],
+        [
+          "paraiso do sul",
+          "RS"
+        ],
+        [
+          "pelotas",
+          "RS"
+        ],
+        [
+          "portao",
+          "RS"
+        ],
+        [
+          "porto alegre",
+          "RS"
+        ],
+        [
+          "rio grande",
+          "RS"
+        ],
+        [
+          "rolante",
+          "RS"
+        ],
+        [
+          "ronda alta",
+          "RS"
+        ],
+        [
+          "santa cruz do sul",
+          "RS"
+        ],
+        [
+          "santa maria",
+          "RS"
+        ],
+        [
+          "santa rosa",
+          "RS"
+        ],
+        [
+          "santo antonio da patrulha",
+          "RS"
+        ],
+        [
+          "santo ângelo",
+          "RS"
+        ],
+        [
+          "sao leopoldo",
+          "RS"
+        ],
+        [
+          "sapiranga",
+          "RS"
+        ],
+        [
+          "soledade",
+          "RS"
+        ],
+        [
+          "são leopoldo",
+          "RS"
+        ],
+        [
+          "torres",
+          "RS"
+        ],
+        [
+          "tres coroas",
+          "RS"
+        ],
+        [
+          "tres de maio",
+          "RS"
+        ],
+        [
+          "triunfo",
+          "RS"
+        ],
+        [
+          "uruguaiana",
+          "RS"
+        ],
+        [
+          "vale dos vinhedos",
+          "RS"
+        ],
+        [
+          "venancio aires",
+          "RS"
+        ],
+        [
+          "viamao",
+          "RS"
+        ],
+        [
+          "araquari",
+          "SC"
+        ],
+        [
+          "ararangua",
+          "SC"
+        ],
+        [
+          "balneario camboriu",
+          "SC"
+        ],
+        [
+          "balneário piçarras",
+          "SC"
+        ],
+        [
+          "barra velha",
+          "SC"
+        ],
+        [
+          "blumenau",
+          "SC"
+        ],
+        [
+          "bombinhas",
+          "SC"
+        ],
+        [
+          "braco do norte",
+          "SC"
+        ],
+        [
+          "brusque",
+          "SC"
+        ],
+        [
+          "camboriu",
+          "SC"
+        ],
+        [
+          "campos novos",
+          "SC"
+        ],
+        [
+          "canoinhas",
+          "SC"
+        ],
+        [
+          "caçador",
+          "SC"
+        ],
+        [
+          "chapeco",
+          "SC"
+        ],
+        [
+          "concordia",
+          "SC"
+        ],
+        [
+          "cordilheira alta",
+          "SC"
+        ],
+        [
+          "criciuma",
+          "SC"
+        ],
+        [
+          "criciúma",
+          "SC"
+        ],
+        [
+          "curitibanos",
+          "SC"
+        ],
+        [
+          "florianopolis",
+          "SC"
+        ],
+        [
+          "florianópolis",
+          "SC"
+        ],
+        [
+          "garopaba",
+          "SC"
+        ],
+        [
+          "garuva",
+          "SC"
+        ],
+        [
+          "gaspar",
+          "SC"
+        ],
+        [
+          "imbituba",
+          "SC"
+        ],
+        [
+          "indaial",
+          "SC"
+        ],
+        [
+          "itajai",
+          "SC"
+        ],
+        [
+          "itajaí",
+          "SC"
+        ],
+        [
+          "itapema",
+          "SC"
+        ],
+        [
+          "içara",
+          "SC"
+        ],
+        [
+          "jaguaruna",
+          "SC"
+        ],
+        [
+          "jaragua do sul",
+          "SC"
+        ],
+        [
+          "joinville",
+          "SC"
+        ],
+        [
+          "lages",
+          "SC"
+        ],
+        [
+          "laguna",
+          "SC"
+        ],
+        [
+          "laurentino",
+          "SC"
+        ],
+        [
+          "luiz alves",
+          "SC"
+        ],
+        [
+          "massaranduba",
+          "SC"
+        ],
+        [
+          "navegantes",
+          "SC"
+        ],
+        [
+          "nova trento",
+          "SC"
+        ],
+        [
+          "orleans",
+          "SC"
+        ],
+        [
+          "palhoca",
+          "SC"
+        ],
+        [
+          "palhoça",
+          "SC"
+        ],
+        [
+          "paulo lopes",
+          "SC"
+        ],
+        [
+          "pinhalzinho",
+          "SC"
+        ],
+        [
+          "porto belo",
+          "SC"
+        ],
+        [
+          "presidente getulio",
+          "SC"
+        ],
+        [
+          "rio do oeste",
+          "SC"
+        ],
+        [
+          "rio do sul",
+          "SC"
+        ],
+        [
+          "rio negrinho",
+          "SC"
+        ],
+        [
+          "rodeio",
+          "SC"
+        ],
+        [
+          "santa cecília",
+          "SC"
+        ],
+        [
+          "sao bento do sul",
+          "SC"
+        ],
+        [
+          "sao francisco do sul",
+          "SC"
+        ],
+        [
+          "sao jose",
+          "SC"
+        ],
+        [
+          "sao ludgero",
+          "SC"
+        ],
+        [
+          "sao miguel do oeste",
+          "SC"
+        ],
+        [
+          "sombrio",
+          "SC"
+        ],
+        [
+          "taio",
+          "SC"
+        ],
+        [
+          "timbo",
+          "SC"
+        ],
+        [
+          "treze tilias",
+          "SC"
+        ],
+        [
+          "tubarao",
+          "SC"
+        ],
+        [
+          "videira",
+          "SC"
+        ],
+        [
+          "xanxere",
+          "SC"
+        ],
+        [
+          "xaxim",
+          "SC"
+        ],
+        [
+          "aracaju",
+          "SE"
+        ],
+        [
+          "neopolis",
+          "SE"
+        ],
+        [
+          "alambari",
+          "SP"
+        ],
+        [
+          "alvares machado",
+          "SP"
+        ],
+        [
+          "americana",
+          "SP"
+        ],
+        [
+          "amparo",
+          "SP"
+        ],
+        [
+          "aparecida",
+          "SP"
+        ],
+        [
+          "aracatuba",
+          "SP"
+        ],
+        [
+          "araraquara",
+          "SP"
+        ],
+        [
+          "araras",
+          "SP"
+        ],
+        [
+          "araçatuba",
+          "SP"
+        ],
+        [
+          "artur nogueira",
+          "SP"
+        ],
+        [
+          "aruja",
+          "SP"
+        ],
+        [
+          "assis",
+          "SP"
+        ],
+        [
+          "atibaia",
+          "SP"
+        ],
+        [
+          "auriflama",
+          "SP"
+        ],
+        [
+          "avare",
+          "SP"
+        ],
+        [
+          "bady bassitt",
+          "SP"
+        ],
+        [
+          "bariri",
+          "SP"
+        ],
+        [
+          "barretos",
+          "SP"
+        ],
+        [
+          "barrinha",
+          "SP"
+        ],
+        [
+          "barueri",
+          "SP"
+        ],
+        [
+          "batatais",
+          "SP"
+        ],
+        [
+          "bauru",
+          "SP"
+        ],
+        [
+          "bebedouro",
+          "SP"
+        ],
+        [
+          "bertioga",
+          "SP"
+        ],
+        [
+          "birigui",
+          "SP"
+        ],
+        [
+          "bofete",
+          "SP"
+        ],
+        [
+          "boituva",
+          "SP"
+        ],
+        [
+          "bom jesus dos perdoes",
+          "SP"
+        ],
+        [
+          "bonfim paulista",
+          "SP"
+        ],
+        [
+          "botucatu",
+          "SP"
+        ],
+        [
+          "braganca paulista",
+          "SP"
+        ],
+        [
+          "bragança paulista",
+          "SP"
+        ],
+        [
+          "brotas",
+          "SP"
+        ],
+        [
+          "buritama",
+          "SP"
+        ],
+        [
+          "cafelandia",
+          "SP"
+        ],
+        [
+          "caieiras",
+          "SP"
+        ],
+        [
+          "cajamar",
+          "SP"
+        ],
+        [
+          "campinas",
+          "SP"
+        ],
+        [
+          "campo limpo paulista",
+          "SP"
+        ],
+        [
+          "cananéia",
+          "SP"
+        ],
+        [
+          "capivari",
+          "SP"
+        ],
+        [
+          "carapicuiba",
+          "SP"
+        ],
+        [
+          "catanduva",
+          "SP"
+        ],
+        [
+          "cerqueira cesar",
+          "SP"
+        ],
+        [
+          "clementina",
+          "SP"
+        ],
+        [
+          "conchal",
+          "SP"
+        ],
+        [
+          "cordeiropolis",
+          "SP"
+        ],
+        [
+          "cosmopolis",
+          "SP"
+        ],
+        [
+          "cotia",
+          "SP"
+        ],
+        [
+          "cravinhos",
+          "SP"
+        ],
+        [
+          "cruzeiro",
+          "SP"
+        ],
+        [
+          "descalvado",
+          "SP"
+        ],
+        [
+          "diadema",
+          "SP"
+        ],
+        [
+          "dois corregos",
+          "SP"
+        ],
+        [
+          "dracena",
+          "SP"
+        ],
+        [
+          "echapora",
+          "SP"
+        ],
+        [
+          "embu",
+          "SP"
+        ],
+        [
+          "embu das artes",
+          "SP"
+        ],
+        [
+          "embu-guacu",
+          "SP"
+        ],
+        [
+          "engenheiro coelho",
+          "SP"
+        ],
+        [
+          "fernando prestes",
+          "SP"
+        ],
+        [
+          "fernandopolis",
+          "SP"
+        ],
+        [
+          "ferraz de vasconcelos",
+          "SP"
+        ],
+        [
+          "franca",
+          "SP"
+        ],
+        [
+          "francisco morato",
+          "SP"
+        ],
+        [
+          "franco da rocha",
+          "SP"
+        ],
+        [
+          "garca",
+          "SP"
+        ],
+        [
+          "guaimbe",
+          "SP"
+        ],
+        [
+          "guaira",
+          "SP"
+        ],
+        [
+          "guara",
+          "SP"
+        ],
+        [
+          "guaratingueta",
+          "SP"
+        ],
+        [
+          "guariba",
+          "SP"
+        ],
+        [
+          "guaruja",
+          "SP"
+        ],
+        [
+          "guarujá",
+          "SP"
+        ],
+        [
+          "guarulhos",
+          "SP"
+        ],
+        [
+          "holambra",
+          "SP"
+        ],
+        [
+          "hortolandia",
+          "SP"
+        ],
+        [
+          "hortolândia",
+          "SP"
+        ],
+        [
+          "ibitinga",
+          "SP"
+        ],
+        [
+          "igaracu do tiete",
+          "SP"
+        ],
+        [
+          "indaiatuba",
+          "SP"
+        ],
+        [
+          "ipaussu",
+          "SP"
+        ],
+        [
+          "ipua",
+          "SP"
+        ],
+        [
+          "itajobi",
+          "SP"
+        ],
+        [
+          "itapecerica da serra",
+          "SP"
+        ],
+        [
+          "itapetininga",
+          "SP"
+        ],
+        [
+          "itapeva",
+          "SP"
+        ],
+        [
+          "itapevi",
+          "SP"
+        ],
+        [
+          "itaporanga",
+          "SP"
+        ],
+        [
+          "itapui",
+          "SP"
+        ],
+        [
+          "itaquaquecetuba",
+          "SP"
+        ],
+        [
+          "itatiba",
+          "SP"
+        ],
+        [
+          "itirapina",
+          "SP"
+        ],
+        [
+          "itu",
+          "SP"
+        ],
+        [
+          "jaboticabal",
+          "SP"
+        ],
+        [
+          "jacarei",
+          "SP"
+        ],
+        [
+          "jaci",
+          "SP"
+        ],
+        [
+          "jaguariuna",
+          "SP"
+        ],
+        [
+          "jaguariúna",
+          "SP"
+        ],
+        [
+          "jales",
+          "SP"
+        ],
+        [
+          "jambeiro",
+          "SP"
+        ],
+        [
+          "jarinu",
+          "SP"
+        ],
+        [
+          "jau",
+          "SP"
+        ],
+        [
+          "jaú",
+          "SP"
+        ],
+        [
+          "jundiai",
+          "SP"
+        ],
+        [
+          "jundiaí",
+          "SP"
+        ],
+        [
+          "laranjal paulista",
+          "SP"
+        ],
+        [
+          "leme",
+          "SP"
+        ],
+        [
+          "lencois paulista",
+          "SP"
+        ],
+        [
+          "lençóis paulista",
+          "SP"
+        ],
+        [
+          "limeira",
+          "SP"
+        ],
+        [
+          "lorena",
+          "SP"
+        ],
+        [
+          "louveira",
+          "SP"
+        ],
+        [
+          "macatuba",
+          "SP"
+        ],
+        [
+          "mairinque",
+          "SP"
+        ],
+        [
+          "mairipora",
+          "SP"
+        ],
+        [
+          "marapoama",
+          "SP"
+        ],
+        [
+          "marilia",
+          "SP"
+        ],
+        [
+          "marília",
+          "SP"
+        ],
+        [
+          "maua",
+          "SP"
+        ],
+        [
+          "mauá",
+          "SP"
+        ],
+        [
+          "miguelopolis",
+          "SP"
+        ],
+        [
+          "mineiros do tiete",
+          "SP"
+        ],
+        [
+          "mirandopolis",
+          "SP"
+        ],
+        [
+          "mirassol",
+          "SP"
+        ],
+        [
+          "mococa",
+          "SP"
+        ],
+        [
+          "mogi das cruzes",
+          "SP"
+        ],
+        [
+          "mogi guaçu",
+          "SP"
+        ],
+        [
+          "mogi mirim",
+          "SP"
+        ],
+        [
+          "mogi-guacu",
+          "SP"
+        ],
+        [
+          "mombuca",
+          "SP"
+        ],
+        [
+          "monte alto",
+          "SP"
+        ],
+        [
+          "monteiro lobato",
+          "SP"
+        ],
+        [
+          "nhandeara",
+          "SP"
+        ],
+        [
+          "nova odessa",
+          "SP"
+        ],
+        [
+          "novo horizonte",
+          "SP"
+        ],
+        [
+          "olimpia",
+          "SP"
+        ],
+        [
+          "orlandia",
+          "SP"
+        ],
+        [
+          "osasco",
+          "SP"
+        ],
+        [
+          "osvaldo cruz",
+          "SP"
+        ],
+        [
+          "ourinhos",
+          "SP"
+        ],
+        [
+          "paulinia",
+          "SP"
+        ],
+        [
+          "paulínia",
+          "SP"
+        ],
+        [
+          "pederneiras",
+          "SP"
+        ],
+        [
+          "pedregulho",
+          "SP"
+        ],
+        [
+          "pedreira",
+          "SP"
+        ],
+        [
+          "pedrinhas paulista",
+          "SP"
+        ],
+        [
+          "penapolis",
+          "SP"
+        ],
+        [
+          "pilar do sul",
+          "SP"
+        ],
+        [
+          "pindamonhangaba",
+          "SP"
+        ],
+        [
+          "pinhalzinho",
+          "SP"
+        ],
+        [
+          "piracicaba",
+          "SP"
+        ],
+        [
+          "pirassununga",
+          "SP"
+        ],
+        [
+          "pitangueiras",
+          "SP"
+        ],
+        [
+          "pompeia",
+          "SP"
+        ],
+        [
+          "porto ferreira",
+          "SP"
+        ],
+        [
+          "poá",
+          "SP"
+        ],
+        [
+          "pradopolis",
+          "SP"
+        ],
+        [
+          "praia grande",
+          "SP"
+        ],
+        [
+          "presidente bernardes",
+          "SP"
+        ],
+        [
+          "presidente epitacio",
+          "SP"
+        ],
+        [
+          "presidente prudente",
+          "SP"
+        ],
+        [
+          "presidente venceslau",
+          "SP"
+        ],
+        [
+          "registro",
+          "SP"
+        ],
+        [
+          "ribeirao pires",
+          "SP"
+        ],
+        [
+          "ribeirao preto",
+          "SP"
+        ],
+        [
+          "ribeirão pires",
+          "SP"
+        ],
+        [
+          "ribeirão preto",
+          "SP"
+        ],
+        [
+          "rio claro",
+          "SP"
+        ],
+        [
+          "rio das pedras",
+          "SP"
+        ],
+        [
+          "salto",
+          "SP"
+        ],
+        [
+          "santa barbara d'oeste",
+          "SP"
+        ],
+        [
+          "santa bárbara d'oeste",
+          "SP"
+        ],
+        [
+          "santa maria da serra",
+          "SP"
+        ],
+        [
+          "santa rosa de viterbo",
+          "SP"
+        ],
+        [
+          "santana de parnaiba",
+          "SP"
+        ],
+        [
+          "santo andre",
+          "SP"
+        ],
+        [
+          "santo andré",
+          "SP"
+        ],
+        [
+          "santo antonio de posse",
+          "SP"
+        ],
+        [
+          "santos",
+          "SP"
+        ],
+        [
+          "sao bernardo do campo",
+          "SP"
+        ],
+        [
+          "sao caetano do sul",
+          "SP"
+        ],
+        [
+          "sao carlos",
+          "SP"
+        ],
+        [
+          "sao joao da boa vista",
+          "SP"
+        ],
+        [
+          "sao joaquim da barra",
+          "SP"
+        ],
+        [
+          "sao jose do rio preto",
+          "SP"
+        ],
+        [
+          "sao jose dos campos",
+          "SP"
+        ],
+        [
+          "sao paulo",
+          "SP"
+        ],
+        [
+          "sao pedro",
+          "SP"
+        ],
+        [
+          "sao roque",
+          "SP"
+        ],
+        [
+          "sao sebastiao",
+          "SP"
+        ],
+        [
+          "sao sebastiao da grama",
+          "SP"
+        ],
+        [
+          "sao vicente",
+          "SP"
+        ],
+        [
+          "serra negra",
+          "SP"
+        ],
+        [
+          "serrana",
+          "SP"
+        ],
+        [
+          "socorro",
+          "SP"
+        ],
+        [
+          "sorocaba",
+          "SP"
+        ],
+        [
+          "sumare",
+          "SP"
+        ],
+        [
+          "suzano",
+          "SP"
+        ],
+        [
+          "são bernardo do campo",
+          "SP"
+        ],
+        [
+          "são caetano do sul",
+          "SP"
+        ],
+        [
+          "são josé do rio pardo",
+          "SP"
+        ],
+        [
+          "são josé do rio preto",
+          "SP"
+        ],
+        [
+          "são josé dos campos",
+          "SP"
+        ],
+        [
+          "são paulo",
+          "SP"
+        ],
+        [
+          "tabatinga",
+          "SP"
+        ],
+        [
+          "taboao da serra",
+          "SP"
+        ],
+        [
+          "taboão da serra",
+          "SP"
+        ],
+        [
+          "tambau",
+          "SP"
+        ],
+        [
+          "tanabi",
+          "SP"
+        ],
+        [
+          "taruma",
+          "SP"
+        ],
+        [
+          "tatui",
+          "SP"
+        ],
+        [
+          "taubate",
+          "SP"
+        ],
+        [
+          "taubaté",
+          "SP"
+        ],
+        [
+          "tiete",
+          "SP"
+        ],
+        [
+          "tupa",
+          "SP"
+        ],
+        [
+          "ubatuba",
+          "SP"
+        ],
+        [
+          "valinhos",
+          "SP"
+        ],
+        [
+          "vargem grande do sul",
+          "SP"
+        ],
+        [
+          "vargem grande paulista",
+          "SP"
+        ],
+        [
+          "vera cruz",
+          "SP"
+        ],
+        [
+          "votorantim",
+          "SP"
+        ],
+        [
+          "votuporanga",
+          "SP"
+        ],
+        [
+          "várzea paulista",
+          "SP"
+        ]
+      ],
+      "hovertemplate": "City: %{customdata[0]} <br>State: %{customdata[1]} <br>Number of Sellers: %{z:,}",
+      "lat": [
+        -9.96621427193253,
+        -3.0795783434247967,
+        -16.400187212609048,
+        -11.76948844484253,
+        -16.369117016592682,
+        -12.250012686237463,
+        -14.223207197286886,
+        -14.798871140299072,
+        -12.154533930203856,
+        -11.304164446373443,
+        -12.884900331298656,
+        -9.405832218593403,
+        -16.432027097855745,
+        -12.96265670995726,
+        -3.737584371922989,
+        -3.8780846128375694,
+        -3.763107946625493,
+        -7.222549481274524,
+        -3.905726996478778,
+        -3.926842620267336,
+        -6.792557339326901,
+        -15.8059264028339,
+        -15.825696956850923,
+        -15.828456407099898,
+        -20.076844770408805,
+        -20.8465038277315,
+        -20.33027859704238,
+        -19.52984427509196,
+        -20.32070949843202,
+        -20.95206473566138,
+        -20.177553426226176,
+        -20.361682395783628,
+        -20.359641371522812,
+        -20.287785852128938,
+        -20.29125868830205,
+        -16.76706286540188,
+        -16.325646631066014,
+        -16.77682244566511,
+        -15.544024654910425,
+        -16.68497306838385,
+        -16.68214555022825,
+        -15.7491870749417,
+        -16.22800115172034,
+        -17.733896355961825,
+        -17.30349906583519,
+        -17.798027631733316,
+        -14.43073368841814,
+        -14.518474806651268,
+        -2.519370275132052,
+        -21.424588981834425,
+        -22.07047143353818,
+        -18.64778819488765,
+        -19.59473228654026,
+        -15.920350682439093,
+        -21.961660896718744,
+        -21.219352072707792,
+        -19.908765632662902,
+        -19.954066182129804,
+        -16.562527667206663,
+        -22.26258413023529,
+        -22.75549974414299,
+        -21.834793738633515,
+        -21.109499455456902,
+        -19.785631048020417,
+        -20.55966811821635,
+        -20.2690173748538,
+        -21.387342415899255,
+        -20.437204870235007,
+        -21.865404185877193,
+        -20.50992275165819,
+        -20.658076729054834,
+        -19.919039515683153,
+        -19.509009469549564,
+        -20.144261597007578,
+        -21.509803394507347,
+        -21.109897644968864,
+        -22.855478223289115,
+        -20.46253562176835,
+        -20.279454990887864,
+        -18.865189069941284,
+        -18.775765183946625,
+        -21.00463525274551,
+        -19.515039180739823,
+        -20.009377572882872,
+        -20.940577532886604,
+        -19.469778652462953,
+        -19.63423035576115,
+        -20.74428836520151,
+        -20.07831096929482,
+        -22.288146664323694,
+        -15.804474283805774,
+        -19.821124752272205,
+        -17.73102668412016,
+        -21.754106779516853,
+        -20.024064772425362,
+        -19.636520104484408,
+        -21.974223701500048,
+        -19.99123842180006,
+        -22.430217898121075,
+        -16.72849059823566,
+        -21.12961076827783,
+        -20.007035015080383,
+        -20.698563939792177,
+        -22.278485305030316,
+        -20.391011466737957,
+        -19.853866471107963,
+        -20.722383701952456,
+        -18.588562538569054,
+        -19.613117562252093,
+        -21.796654260508415,
+        -20.41011057281399,
+        -20.678333088805555,
+        -22.234176028308188,
+        -21.059067150905058,
+        -19.781056521338158,
+        -19.88287329169934,
+        -22.247210939506797,
+        -21.128722942016065,
+        -19.45692266227589,
+        -17.86605698610435,
+        -19.545958115626537,
+        -21.10980791604441,
+        -21.1726252218232,
+        -21.692990977500056,
+        -21.11468906736534,
+        -19.751795711347775,
+        -18.91551224765649,
+        -18.95332199399305,
+        -21.561327093604785,
+        -19.731097253636868,
+        -20.754972814853335,
+        -20.470062576972285,
+        -18.50726515886232,
+        -15.59760920493608,
+        -15.95127425196516,
+        -11.858358280599054,
+        -7.231107304012272,
+        -7.134346744258585,
+        -6.837168594957803,
+        -6.491794555348289,
+        -7.185330489314501,
+        -9.024839005157318,
+        -8.280838827967246,
+        -8.068123379304994,
+        -8.118185235472485,
+        -5.082661896995924,
+        -25.346267819559866,
+        -25.91985831671865,
+        -23.55484333431907,
+        -23.40888332472146,
+        -25.585714154028846,
+        -23.111896862925292,
+        -23.112718429096926,
+        -25.21080605480616,
+        -23.665523235370998,
+        -23.287250137640758,
+        -25.45952017783654,
+        -25.375606922660335,
+        -24.038066492202038,
+        -24.95595615069685,
+        -24.794469907209375,
+        -23.661238513530442,
+        -25.351426853426876,
+        -22.837653869064955,
+        -23.181161077296654,
+        -25.45314573672775,
+        -24.702966464945906,
+        -25.655911775273868,
+        -23.614374068425708,
+        -24.296024477069246,
+        -25.521158815079293,
+        -26.070961876714943,
+        -24.185936255296784,
+        -24.08674452889675,
+        -25.39015019812817,
+        -25.887866961664873,
+        -25.229677010502076,
+        -25.474093335032038,
+        -25.147980629391814,
+        -23.8119965425153,
+        -23.622748095003274,
+        -25.404934780834598,
+        -22.929383785209307,
+        -23.314415889539116,
+        -23.34495591219923,
+        -23.522116589381856,
+        -25.770383610713115,
+        -24.554525017898506,
+        -23.48392434035238,
+        -23.41685999014669,
+        -23.43262075699894,
+        -25.29320167334103,
+        -23.457603283499257,
+        -24.28579720485287,
+        -23.082764652241618,
+        -24.625809140863744,
+        -26.229265318331908,
+        -25.430260607564257,
+        -23.78967571984096,
+        -24.75784641485761,
+        -25.093201294628823,
+        -23.315929630442287,
+        -25.442862117746696,
+        -25.533489741695114,
+        -23.442024635170934,
+        -23.059061150910853,
+        -25.371975656252413,
+        -23.77185835065084,
+        -24.728849877646496,
+        -23.76369629845646,
+        -26.229618396338136,
+        -22.99495173147964,
+        -21.62582998898821,
+        -22.766572484803717,
+        -22.541153347532763,
+        -22.73723765866893,
+        -22.751923494229857,
+        -22.15968821079869,
+        -21.74244670463739,
+        -22.71473796323484,
+        -22.762935676036015,
+        -22.377404808443544,
+        -22.639664367772493,
+        -22.92655148720672,
+        -22.78350564873647,
+        -22.809592282142432,
+        -22.810168122091238,
+        -22.895371422190166,
+        -22.894315467155177,
+        -22.2798798190238,
+        -22.74301295672156,
+        -22.74267504957996,
+        -22.61483382699214,
+        -22.16428987434635,
+        -22.469264006368686,
+        -22.500221002760977,
+        -22.71467796764372,
+        -22.470728000495303,
+        -22.711927870432564,
+        -22.915030334420678,
+        -21.552859881634557,
+        -22.82798957682812,
+        -22.786440433812203,
+        -22.821168436906095,
+        -22.91071454579464,
+        -22.78252565993336,
+        -22.416348396650395,
+        -22.111726067935773,
+        -22.40767287308994,
+        -22.50866919780627,
+        -6.079137345909716,
+        -5.812242777634381,
+        -5.900784348278868,
+        -10.879922164076337,
+        -8.769054149715021,
+        -30.008429725047467,
+        -28.87190543829348,
+        -31.32588882739402,
+        -29.16472926011416,
+        -30.033962971128897,
+        -29.92583764692,
+        -27.986799762328445,
+        -29.67704500881413,
+        -29.92165587909877,
+        -28.29124464593789,
+        -29.163658257979236,
+        -28.20732212632177,
+        -27.639169118303382,
+        -28.63680239984414,
+        -29.267688717622974,
+        -29.035257065411393,
+        -27.627277989445282,
+        -29.571977530057968,
+        -29.949823496703946,
+        -29.345230455593615,
+        -28.8019037608538,
+        -29.605286893562898,
+        -27.728956133348813,
+        -29.45567909496981,
+        -29.68780422662315,
+        -29.375117732594422,
+        -29.690185125405122,
+        -28.596703774432147,
+        -29.723802873745612,
+        -31.75126875864103,
+        -29.694204375791138,
+        -30.049248315917616,
+        -32.070940240601104,
+        -29.64963363646582,
+        -27.78222223380718,
+        -29.7192215966678,
+        -29.69474002388504,
+        -27.921370559268944,
+        -29.833102764742073,
+        -28.290552519798347,
+        -29.76481201015053,
+        -29.639257291805553,
+        -28.827449667113736,
+        -29.764357175970268,
+        -29.34114246818455,
+        -29.511355583933103,
+        -27.77657590438832,
+        -29.930632716179662,
+        -29.765154720951514,
+        -29.17519237322801,
+        -29.61111067145766,
+        -30.07749033661207,
+        -26.407378348238257,
+        -28.941557934681157,
+        -26.994338792085678,
+        -26.760771390660455,
+        -26.660970150266756,
+        -26.899545050254957,
+        -27.15657253033492,
+        -28.274304945434466,
+        -27.100857082718758,
+        -27.018470907678466,
+        -27.399055235300438,
+        -26.17842967715644,
+        -26.77975627819449,
+        -27.09656981368369,
+        -27.232317728704068,
+        -26.986388569060693,
+        -28.6838100208524,
+        -28.687751716498752,
+        -27.290948728745207,
+        -27.56827504807536,
+        -27.601344926358873,
+        -28.038737678812907,
+        -26.034602380283914,
+        -26.91708268415727,
+        -28.231882617674767,
+        -26.89651021522555,
+        -26.907829065996584,
+        -26.911368655003432,
+        -27.104775732474042,
+        -28.715980124328123,
+        -28.633920987357754,
+        -26.48137518238227,
+        -26.296137780383066,
+        -27.813280061035268,
+        -28.47572857600972,
+        -27.221224290121654,
+        -26.77622549900964,
+        -26.610216926670343,
+        -26.875806870860107,
+        -27.28299944363184,
+        -28.357506793762706,
+        -27.661956310033084,
+        -27.656218132035214,
+        -27.978665492288254,
+        -26.847939738284047,
+        -27.15728166876613,
+        -27.050238879786896,
+        -27.19614273379346,
+        -27.21454204086186,
+        -26.25613891864582,
+        -26.88932240353919,
+        -26.960282815228826,
+        -26.24438697631867,
+        -26.24556370537883,
+        -27.58147089943372,
+        -28.32938171277176,
+        -26.73341376125163,
+        -29.108465252964574,
+        -27.118392469189253,
+        -26.827603296905576,
+        -26.998521324070396,
+        -28.480825140637595,
+        -27.00447650803858,
+        -26.876415100422566,
+        -26.959436655053853,
+        -10.941346378601748,
+        -10.32593083501133,
+        -23.56157106605844,
+        -22.07699368740586,
+        -22.737256111041713,
+        -22.708334832836332,
+        -22.851231225609038,
+        -21.204128010217328,
+        -21.782712943567855,
+        -22.357745988322282,
+        -21.210730490968427,
+        -22.571207861628345,
+        -23.398238275752803,
+        -22.65849706222492,
+        -23.123134519244505,
+        -20.685083174259976,
+        -23.10090897853093,
+        -20.91711533777068,
+        -22.074022270567585,
+        -20.559626185890163,
+        -21.190885638654144,
+        -23.50591265074973,
+        -20.89297727758808,
+        -22.32668283930309,
+        -20.943887781782358,
+        -23.818390396829994,
+        -21.289289330616256,
+        -23.110602286087335,
+        -23.287426948305722,
+        -23.138276989175566,
+        -21.254547608936228,
+        -22.88213183329501,
+        -22.947486120124623,
+        -22.954251290691175,
+        -22.282154968038324,
+        -21.067287508771535,
+        -21.80320059939524,
+        -23.365026849367748,
+        -23.369817554808083,
+        -22.900868230378116,
+        -23.21221676734244,
+        -25.009292746688903,
+        -22.997483794858958,
+        -23.545480340793368,
+        -21.136969013718122,
+        -23.034100418770535,
+        -21.56018491317655,
+        -22.338398569332117,
+        -22.481763564480133,
+        -22.640198227021354,
+        -23.610952128091473,
+        -21.339337940660595,
+        -22.572679309827887,
+        -21.908634153727803,
+        -23.68976841618049,
+        -22.368024597233408,
+        -21.48639335970809,
+        -22.4299509636415,
+        -23.639810879772895,
+        -23.65603639925299,
+        -23.8351268270498,
+        -22.487817723352375,
+        -21.267134804144064,
+        -20.284168688960182,
+        -23.541294272040886,
+        -20.534039232025886,
+        -23.280906795824283,
+        -23.316172347791127,
+        -22.211471483564306,
+        -21.90997953797039,
+        -20.3249901235719,
+        -20.43217689916522,
+        -22.79959998976734,
+        -21.36350170979939,
+        -23.978535646149805,
+        -23.982272050571883,
+        -23.446399588378316,
+        -22.633046009436132,
+        -22.87687568602691,
+        -22.894875094871367,
+        -21.75732063771276,
+        -22.516187213174263,
+        -23.095823068459914,
+        -23.055151680595838,
+        -20.445531132262545,
+        -21.31499774715289,
+        -23.718320952615475,
+        -23.587600964830155,
+        -23.984094196541136,
+        -23.5486294338563,
+        -23.705464946211745,
+        -22.23455857964727,
+        -23.470259427376792,
+        -23.010064480685884,
+        -22.252002596014556,
+        -23.286022429648437,
+        -21.256827223670943,
+        -23.29586336111174,
+        -20.884709308834225,
+        -22.692540728813626,
+        -22.696775336451452,
+        -20.270890432738017,
+        -23.26168303044727,
+        -23.096492254601632,
+        -22.296909516464844,
+        -22.282094353139048,
+        -23.18987065293681,
+        -23.1688769642747,
+        -23.04955173261455,
+        -22.185288219344287,
+        -22.59316901274666,
+        -22.605589671700805,
+        -22.573478963977,
+        -22.737200126738085,
+        -23.08550507419915,
+        -22.514093447641567,
+        -23.53650295835299,
+        -23.329721686232084,
+        -21.256794218570786,
+        -22.208351508106556,
+        -22.225917717130375,
+        -23.668664747304117,
+        -23.675060794221825,
+        -20.182732189905014,
+        -22.41339600173933,
+        -21.132503677693613,
+        -20.814577890354094,
+        -21.46874145307076,
+        -23.53040121214045,
+        -22.350647541740152,
+        -22.43270018874214,
+        -22.36455117635265,
+        -20.56936647541443,
+        -21.263459220114285,
+        -22.95371488210672,
+        -20.6934599976426,
+        -22.78693537192722,
+        -21.4696009553403,
+        -20.73752999199967,
+        -20.716823599737285,
+        -23.536564187317172,
+        -21.795711019289442,
+        -22.978922384368094,
+        -22.77339077416023,
+        -22.735332235607455,
+        -22.348013116995098,
+        -20.248446312480418,
+        -22.74032548616481,
+        -22.815272553334733,
+        -21.420894135818735,
+        -23.81197455444591,
+        -22.929384305325573,
+        -22.780736129682907,
+        -22.725841079430882,
+        -21.9966717365306,
+        -21.00987455542997,
+        -22.10367343012363,
+        -21.866032425983516,
+        -23.520209593109197,
+        -21.35993680296325,
+        -24.02142365584944,
+        -22.00850814387055,
+        -21.773562635668824,
+        -22.122188785499635,
+        -21.8742882795038,
+        -24.498837779550897,
+        -23.70175527695895,
+        -21.17749997062059,
+        -23.708055225042713,
+        -21.20503117518519,
+        -22.40538785404829,
+        -22.842321876787764,
+        -23.19676253260492,
+        -22.743759851905715,
+        -22.76019760418465,
+        -22.569639672881543,
+        -21.48348869998301,
+        -23.456562380345087,
+        -23.65949573266772,
+        -23.662540457945056,
+        -22.60561843199777,
+        -23.96252319074522,
+        -23.70556727901837,
+        -23.62645789793924,
+        -22.012121291862986,
+        -21.97755232416891,
+        -20.585751390105457,
+        -20.809630034979207,
+        -23.206977146604583,
+        -23.5715092645496,
+        -22.55124525869923,
+        -23.53809833519712,
+        -23.77629784715321,
+        -21.710870954893334,
+        -23.96540754702386,
+        -22.614621137795265,
+        -21.20810212661793,
+        -22.596373040143575,
+        -23.4853450343409,
+        -22.820756497449878,
+        -23.549529536840787,
+        -23.720210020960653,
+        -23.627244498870265,
+        -21.582987429934313,
+        -20.812314765707995,
+        -23.22477197573663,
+        -23.569855656389567,
+        -21.73706314242179,
+        -23.61925425991307,
+        -23.634311572725757,
+        -21.703495030535553,
+        -20.623521591055777,
+        -22.7489466206339,
+        -23.349702680336016,
+        -23.02544666423089,
+        -23.023711571446487,
+        -23.101621006440027,
+        -21.933036977718164,
+        -23.452929299956928,
+        -22.97089118044588,
+        -21.834918641034367,
+        -23.622633411415162,
+        -22.22217393101984,
+        -23.547265880122136,
+        -20.418313494479584,
+        -23.214986587829216
+      ],
+      "lon": [
+        -67.82662567759225,
+        -60.007107446741344,
+        -39.26274691403601,
+        -41.90185348124609,
+        -39.58383485681395,
+        -38.956961887200904,
+        -42.78339770003472,
+        -39.04216751520534,
+        -39.74046054005801,
+        -41.855805030013435,
+        -38.31467051487966,
+        -38.22267281820937,
+        -39.07562867228171,
+        -38.4616867553148,
+        -38.65032917297563,
+        -38.4586571230597,
+        -38.532429724974165,
+        -39.3161107413191,
+        -40.74612755881526,
+        -38.60859603224847,
+        -39.29859640215861,
+        -47.96335546260689,
+        -47.97412036945788,
+        -48.11270150283859,
+        -41.12371778471333,
+        -41.12620227324465,
+        -40.38342691295592,
+        -40.63956105804319,
+        -40.71257107343459,
+        -41.342187048258076,
+        -40.24827651942884,
+        -40.434973177371816,
+        -40.310135643738555,
+        -40.29813693117447,
+        -40.30316957988785,
+        -49.438089420466014,
+        -48.9487139066805,
+        -49.27652163386837,
+        -47.33225743558541,
+        -49.27615391915812,
+        -49.267053727535036,
+        -49.332105332149894,
+        -47.946813469440556,
+        -49.11590889021752,
+        -49.02636879088997,
+        -50.92189186283831,
+        -49.7106029180799,
+        -49.14209708875239,
+        -44.27076677434612,
+        -45.95181438502002,
+        -46.57354819165932,
+        -48.19413419921396,
+        -46.935187501820906,
+        -46.10773503284158,
+        -44.88903628055419,
+        -43.771457365243094,
+        -43.95755214150804,
+        -44.166961626958226,
+        -45.9986358674731,
+        -46.1711239405763,
+        -46.14001332890425,
+        -45.40188042460609,
+        -45.8298343383836,
+        -42.15296352209461,
+        -44.86917286484877,
+        -44.822366699776936,
+        -42.69449766632387,
+        -44.76203405975947,
+        -45.65082349975035,
+        -43.86153972516934,
+        -43.78017241246155,
+        -44.05785207133867,
+        -42.62025165998482,
+        -44.889300785600845,
+        -46.196159335177065,
+        -44.02336767935939,
+        -46.31950127100401,
+        -45.433058998165116,
+        -49.2025514813791,
+        -41.95439664787714,
+        -42.93166199720478,
+        -42.72034572426051,
+        -46.56160823512746,
+        -44.080574996709,
+        -45.82723735222764,
+        -42.55329183239247,
+        -43.22334728880885,
+        -46.75138057010448,
+        -44.580855025614476,
+        -46.61190091318773,
+        -43.30872010075817,
+        -43.17290072317547,
+        -46.16221370168258,
+        -43.36263825472674,
+        -45.537189813602396,
+        -43.89965142692265,
+        -45.349168217053055,
+        -44.42872947177971,
+        -46.57340512991158,
+        -43.86084067706113,
+        -42.37615397170592,
+        -43.90569776372654,
+        -44.82676038665832,
+        -46.37130155156736,
+        -43.507047162023525,
+        -44.61036991386323,
+        -46.60862610499827,
+        -46.51218847404726,
+        -44.03989226354459,
+        -46.5641878747299,
+        -42.89889898447688,
+        -43.03908445151552,
+        -45.93171250788116,
+        -44.083411637917365,
+        -44.05519213296082,
+        -43.8483575394955,
+        -45.70752067761215,
+        -44.24679697798903,
+        -44.23993688925752,
+        -41.50507728036173,
+        -42.63727753689989,
+        -44.17477905963709,
+        -43.0219328222331,
+        -45.25986554226319,
+        -42.94534051828742,
+        -47.932382897857686,
+        -48.27184817673774,
+        -48.305255866450835,
+        -45.43651868660234,
+        -43.94146568879755,
+        -42.87782399880434,
+        -54.61578488356733,
+        -54.74875310212911,
+        -56.07469926131472,
+        -54.98521595207802,
+        -55.50845471568516,
+        -35.89350168017597,
+        -34.85295032162538,
+        -35.12688719306731,
+        -37.45186210632904,
+        -35.68043589181518,
+        -36.57020044972058,
+        -35.97142784180055,
+        -34.913631625683124,
+        -35.295942284211705,
+        -42.79056879008656,
+        -49.29537775982062,
+        -53.47434392960834,
+        -51.457599781578594,
+        -51.434763168422826,
+        -49.388363512650265,
+        -50.37155139815296,
+        -50.175860427059064,
+        -49.111757263590974,
+        -51.35659668422704,
+        -51.25734181685694,
+        -49.52544188896422,
+        -49.38601129666979,
+        -52.37748276118378,
+        -53.46087017667774,
+        -50.000403661641826,
+        -52.6104985143235,
+        -49.18945052634131,
+        -51.973422045406195,
+        -50.64960783251922,
+        -49.27496804313667,
+        -54.23744799743772,
+        -49.31010070422007,
+        -52.082794433928086,
+        -53.3145970174448,
+        -54.56579087545026,
+        -53.05267653634423,
+        -53.02562860417749,
+        -54.25118501409774,
+        -51.47150836263734,
+        -48.58448614693002,
+        -50.603896895070974,
+        -50.65035940195514,
+        -54.30365145115528,
+        -50.14014250820877,
+        -52.4701183751283,
+        -52.41067888534097,
+        -53.13587259427024,
+        -51.16549611994071,
+        -52.09904825765634,
+        -51.6776633579356,
+        -49.32480184605346,
+        -54.05852495786673,
+        -51.79990910433005,
+        -51.930159608471406,
+        -51.95398255756739,
+        -54.095134218967516,
+        -52.04183628706323,
+        -53.837677556703355,
+        -52.46257692995561,
+        -54.22673085775215,
+        -52.6752472258087,
+        -49.1785353243731,
+        -50.058695203268186,
+        -51.76595818161726,
+        -50.15705455405596,
+        -51.37647540193033,
+        -54.402764727764094,
+        -49.17247586216827,
+        -51.87179484496577,
+        -51.037541668178726,
+        -50.462083835822334,
+        -52.44832800271509,
+        -53.73948376398968,
+        -53.30627709706737,
+        -51.08568529738476,
+        -44.35337369206609,
+        -42.10489089799902,
+        -41.908675205986285,
+        -44.171692237730994,
+        -43.384292462811366,
+        -42.53355679259949,
+        -42.41686495479445,
+        -41.33144548786945,
+        -43.28943011353076,
+        -42.90403455868563,
+        -41.78580297511498,
+        -43.11958390189897,
+        -42.866096308696896,
+        -43.42440928433377,
+        -43.419776616978716,
+        -43.41408435482181,
+        -43.08675736241624,
+        -43.08689850544847,
+        -42.526566029706544,
+        -43.47237801010695,
+        -43.47413122260852,
+        -43.705683375748585,
+        -43.29222008230457,
+        -43.164343742536715,
+        -43.19161756196673,
+        -43.56344900678065,
+        -44.46159884227604,
+        -42.63004113951235,
+        -43.312994245377126,
+        -42.19618878044136,
+        -43.029842430746534,
+        -43.36954287649116,
+        -42.13299910397718,
+        -42.49498192713521,
+        -43.36346468543083,
+        -42.96615129676583,
+        -43.20671249063601,
+        -43.667689767440216,
+        -44.09717153758818,
+        -37.51443645815574,
+        -35.22146264615494,
+        -35.23134758749348,
+        -61.9429601879738,
+        -63.89191466113916,
+        -51.06694091984415,
+        -52.180111441190874,
+        -54.10952076379699,
+        -51.51629177798449,
+        -52.9001114044151,
+        -51.08405863874132,
+        -54.84099998542986,
+        -51.060403440177396,
+        -51.174495237165495,
+        -52.79025576343903,
+        -51.17937527854719,
+        -53.484839056818565,
+        -52.27064372191643,
+        -50.38044405063785,
+        -51.3466939212746,
+        -51.183154546287696,
+        -54.31036031755507,
+        -50.79472976396335,
+        -50.11914007834461,
+        -51.76658692040368,
+        -51.28985837084383,
+        -51.16427789211877,
+        -52.536535128236906,
+        -51.97037536984715,
+        -51.467963988245124,
+        -51.10823005629176,
+        -51.12251257508265,
+        -51.786946085315805,
+        -53.17918716660632,
+        -52.33736241072302,
+        -51.23318877432421,
+        -51.18857712942569,
+        -52.130763948585496,
+        -50.572926219838166,
+        -52.806500480230916,
+        -52.42667218216916,
+        -53.80206641933696,
+        -54.44175613309931,
+        -50.52008406269422,
+        -54.262511433078906,
+        -51.13889760703791,
+        -51.00307811090833,
+        -52.50925488808854,
+        -51.14452852119104,
+        -49.74491959115231,
+        -50.78115073787274,
+        -54.23551840843681,
+        -51.70738486119434,
+        -57.08086720910939,
+        -51.56925812204669,
+        -52.193313555031075,
+        -51.06081129787715,
+        -48.75811272641001,
+        -49.48297040111515,
+        -48.63373889793516,
+        -48.681909781747734,
+        -48.691953317317825,
+        -49.08859270065089,
+        -48.50320378589786,
+        -49.165211726860235,
+        -48.91495449463355,
+        -48.653822256115376,
+        -51.22556495735034,
+        -50.39172922868355,
+        -51.02377584149889,
+        -52.618216884875174,
+        -52.02496666851924,
+        -52.60331776416496,
+        -49.377456803924375,
+        -49.37831706506252,
+        -50.577361136441255,
+        -48.51674469794347,
+        -48.51770407038007,
+        -48.631463327998624,
+        -48.85354111529444,
+        -48.960346747598315,
+        -48.67933195388163,
+        -49.238014922548395,
+        -48.68808443976638,
+        -48.664953755156425,
+        -48.62229620137128,
+        -49.299651376329926,
+        -49.024157474362944,
+        -49.089294247270416,
+        -48.84274831142134,
+        -50.322292147109586,
+        -48.784659261030505,
+        -49.731481761265776,
+        -48.960948530474354,
+        -49.002534048018276,
+        -48.65736484423828,
+        -48.93077294776362,
+        -49.288673597165094,
+        -48.66488735956293,
+        -48.673608396707074,
+        -48.68271760811336,
+        -52.98723222324769,
+        -48.57004704358004,
+        -49.62755144977645,
+        -49.79595722328515,
+        -49.64117297750651,
+        -49.52153209709076,
+        -49.35056297333393,
+        -50.41834564086907,
+        -49.38703710837611,
+        -48.60788895849941,
+        -48.627005696379236,
+        -49.176644834659655,
+        -53.517529914408506,
+        -49.63523203121822,
+        -49.999646980328485,
+        -49.27037623408747,
+        -51.411579838730134,
+        -49.01044520660919,
+        -51.15253710423868,
+        -52.403994657794016,
+        -52.53171511177201,
+        -37.06727810860317,
+        -36.57752881665699,
+        -47.88510054852834,
+        -51.46756282500047,
+        -47.323699357946985,
+        -46.77982699608922,
+        -45.24664690995327,
+        -50.44358812230458,
+        -48.171714984770624,
+        -47.375545535422965,
+        -50.441586762424336,
+        -47.1657687687331,
+        -46.32257321530195,
+        -50.41828219858361,
+        -46.560481987331165,
+        -50.55462075520381,
+        -48.92341762235375,
+        -49.45081883954137,
+        -48.74025621655563,
+        -48.567785120619796,
+        -48.15620878829506,
+        -46.86935863185775,
+        -47.585052012762034,
+        -49.06668248533467,
+        -48.48609167648656,
+        -46.080623703430774,
+        -50.33560699554277,
+        -48.262470448819585,
+        -47.670586146714506,
+        -46.468612532513475,
+        -47.8152907655656,
+        -48.44704790213187,
+        -46.54150161572496,
+        -46.54064948170496,
+        -48.12510155957027,
+        -50.14440187114213,
+        -49.602212692890134,
+        -46.73560461944511,
+        -46.84138366343025,
+        -47.068536847474405,
+        -46.77576640852021,
+        -47.93195710361432,
+        -47.505725105505064,
+        -46.83902624778059,
+        -48.97216028148743,
+        -49.16234455805434,
+        -50.445800319817664,
+        -47.1683209783616,
+        -47.459958340316014,
+        -47.18994663551806,
+        -46.90435454556691,
+        -47.737310166569,
+        -44.96163046993114,
+        -47.6195840295051,
+        -46.611740825698575,
+        -48.386261979222404,
+        -51.533744143993836,
+        -50.20543406742506,
+        -46.83571744529302,
+        -46.82075834133471,
+        -46.81408628502836,
+        -47.20455471253452,
+        -48.686678524301236,
+        -50.24959605267625,
+        -46.37387106982926,
+        -47.39844550580822,
+        -46.741283768811044,
+        -46.72582117346966,
+        -49.65862497197638,
+        -49.89617225055718,
+        -48.320131288780836,
+        -47.82416381617847,
+        -45.1939480473532,
+        -48.22960077888057,
+        -46.26416193775886,
+        -46.239812679231406,
+        -46.49876979709016,
+        -47.05260391223774,
+        -47.20876878862406,
+        -47.19842888428972,
+        -48.82974353343716,
+        -48.56280548602923,
+        -47.21478983064318,
+        -49.62719098425694,
+        -48.01402332006467,
+        -49.055417305075984,
+        -46.83834116251071,
+        -48.045083206495995,
+        -48.881924042183606,
+        -46.94612308104323,
+        -49.48636347801798,
+        -48.721835002175304,
+        -46.34277286562584,
+        -46.83699389579262,
+        -47.81543112451409,
+        -47.30328085446802,
+        -48.320153673419505,
+        -45.96410450623827,
+        -49.57192076295022,
+        -46.98344353299248,
+        -46.98780603485787,
+        -50.5461937168549,
+        -45.69815213667702,
+        -46.71792466026417,
+        -48.56224780237887,
+        -48.550950089028866,
+        -46.89782087498276,
+        -46.91992335051597,
+        -47.83762131131264,
+        -47.38562111524039,
+        -48.806289499003064,
+        -48.79275125337637,
+        -47.408479247924,
+        -45.115553134409566,
+        -46.95954096067056,
+        -48.71694212220494,
+        -47.18889011605326,
+        -46.59712215964799,
+        -49.1302214871592,
+        -49.94812785768949,
+        -49.94029885372736,
+        -46.44718105358506,
+        -46.455459767821246,
+        -48.02780172057328,
+        -48.45129697299396,
+        -51.103186563082744,
+        -49.50661257216199,
+        -47.00767902184062,
+        -46.193893380838716,
+        -46.94249708569626,
+        -46.96084752634438,
+        -46.94199141203843,
+        -46.02311914850127,
+        -48.495496727506335,
+        -45.839550230520295,
+        -50.042628269869525,
+        -47.29861126207213,
+        -49.222216847438304,
+        -48.9090364662508,
+        -47.87953500680893,
+        -46.78828341997107,
+        -50.879277765103,
+        -49.87355477949062,
+        -47.15324822304401,
+        -47.17665406567105,
+        -48.784495697020546,
+        -47.476741704155444,
+        -46.896753691339335,
+        -50.79127156718951,
+        -50.07691073486756,
+        -47.72290759681854,
+        -45.44263294610259,
+        -46.588867109618306,
+        -47.646621915541594,
+        -47.419981543807395,
+        -48.219255640094126,
+        -50.17893613850754,
+        -47.4781017581213,
+        -46.34886003585382,
+        -48.07391298482993,
+        -46.46182393815411,
+        -51.55634360153442,
+        -52.115709937410585,
+        -51.401833632876645,
+        -51.84496960410871,
+        -47.84616128650988,
+        -46.40967897945957,
+        -47.80564463913564,
+        -46.40172786109902,
+        -47.79446696377569,
+        -47.56608729920489,
+        -47.60705361138728,
+        -47.292606359513954,
+        -47.38583406026285,
+        -47.40974769303825,
+        -48.15539870681134,
+        -47.36865063485143,
+        -46.87917959523193,
+        -46.52009619382176,
+        -46.531021240325806,
+        -46.920447238133505,
+        -46.32780350647337,
+        -46.56428316264351,
+        -46.56492476720857,
+        -47.89327453450669,
+        -46.789872480443535,
+        -47.863693188164746,
+        -49.37689073312779,
+        -45.88386359701909,
+        -46.63207288896058,
+        -47.90659642198052,
+        -47.12751074193693,
+        -45.54236841150545,
+        -46.82083536657486,
+        -46.39116311451284,
+        -46.709593428612386,
+        -47.60158665380721,
+        -46.50720671996104,
+        -47.464271654978425,
+        -47.235422672514,
+        -46.30959916897046,
+        -46.56103568321298,
+        -46.56763159794544,
+        -46.94775856933444,
+        -49.38964243402186,
+        -45.88940161451944,
+        -46.64376070625667,
+        -48.687600901117015,
+        -46.778821520495804,
+        -46.79320588829266,
+        -47.276353860301036,
+        -49.65195844976547,
+        -50.578951684465736,
+        -47.84369836159208,
+        -45.564208997804776,
+        -45.556320415192545,
+        -47.71181914055678,
+        -50.51291637505001,
+        -45.093219408528476,
+        -46.99698053847312,
+        -46.89918572591992,
+        -47.01270417218394,
+        -49.822674319538606,
+        -47.45058667876496,
+        -49.97354155865327,
+        -46.83841582509733
+      ],
+      "radius": 35,
+      "showscale": true,
+      "z": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        7,
+        1,
+        1,
+        7,
+        1,
+        1,
+        1,
+        1,
+        21,
+        6,
+        2,
+        1,
+        4,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        5,
+        3,
+        1,
+        1,
+        3,
+        1,
+        2,
+        19,
+        4,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        4,
+        2,
+        1,
+        2,
+        2,
+        70,
+        5,
+        1,
+        4,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        6,
+        1,
+        1,
+        3,
+        11,
+        2,
+        8,
+        1,
+        2,
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        10,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        7,
+        2,
+        4,
+        1,
+        1,
+        2,
+        1,
+        3,
+        6,
+        3,
+        11,
+        1,
+        4,
+        1,
+        1,
+        4,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        5,
+        1,
+        1,
+        1,
+        1,
+        8,
+        10,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        15,
+        2,
+        1,
+        8,
+        1,
+        1,
+        126,
+        1,
+        6,
+        1,
+        1,
+        5,
+        4,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        26,
+        1,
+        1,
+        1,
+        3,
+        1,
+        40,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        9,
+        1,
+        2,
+        6,
+        3,
+        3,
+        12,
+        3,
+        1,
+        1,
+        1,
+        8,
+        4,
+        1,
+        2,
+        1,
+        2,
+        4,
+        2,
+        1,
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        1,
+        3,
+        1,
+        1,
+        7,
+        1,
+        5,
+        4,
+        2,
+        1,
+        1,
+        4,
+        2,
+        1,
+        1,
+        1,
+        96,
+        1,
+        7,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        2,
+        9,
+        3,
+        18,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5,
+        2,
+        1,
+        7,
+        1,
+        1,
+        3,
+        1,
+        27,
+        1,
+        1,
+        1,
+        1,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        2,
+        1,
+        1,
+        4,
+        1,
+        1,
+        21,
+        1,
+        1,
+        10,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2,
+        2,
+        2,
+        14,
+        6,
+        2,
+        1,
+        2,
+        2,
+        2,
+        6,
+        4,
+        1,
+        1,
+        2,
+        9,
+        22,
+        3,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        4,
+        5,
+        2,
+        1,
+        2,
+        1,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        1,
+        4,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        5,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        10,
+        5,
+        1,
+        4,
+        11,
+        4,
+        1,
+        3,
+        3,
+        8,
+        11,
+        2,
+        1,
+        2,
+        2,
+        4,
+        1,
+        13,
+        3,
+        14,
+        1,
+        1,
+        10,
+        1,
+        3,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        41,
+        2,
+        1,
+        4,
+        11,
+        10,
+        1,
+        1,
+        2,
+        1,
+        2,
+        10,
+        1,
+        1,
+        1,
+        10,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        20,
+        1,
+        2,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        1,
+        51,
+        1,
+        1,
+        1,
+        49,
+        2,
+        8,
+        1,
+        1,
+        2,
+        4,
+        2,
+        1,
+        4,
+        1,
+        1,
+        9,
+        4,
+        1,
+        4,
+        2,
+        8,
+        4,
+        3,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        11,
+        3,
+        4,
+        1,
+        3,
+        3,
+        17,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        12,
+        3,
+        8,
+        6,
+        1,
+        1,
+        1,
+        4,
+        1,
+        17,
+        4,
+        3,
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        33,
+        3,
+        1,
+        2,
+        2,
+        1,
+        1,
+        9,
+        1,
+        5,
+        1,
+        1,
+        1,
+        13,
+        1,
+        1,
+        3,
+        10,
+        1,
+        2,
+        10,
+        1,
+        1,
+        12,
+        1,
+        2,
+        4,
+        53,
+        2,
+        2,
+        12,
+        1,
+        9,
+        4,
+        3,
+        1,
+        1,
+        9,
+        36,
+        11,
+        1,
+        16,
+        34,
+        19,
+        13,
+        1,
+        1,
+        30,
+        15,
+        566,
+        2,
+        7,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        32,
+        5,
+        3,
+        2,
+        2,
+        3,
+        5,
+        3,
+        129,
+        3,
+        11,
+        1,
+        1,
+        2,
+        1,
+        2,
+        4,
+        2,
+        1,
+        5,
+        1,
+        7,
+        3,
+        1,
+        1,
+        4,
+        4,
+        1
+      ],
+      "type": "densitymapbox"
+    }
+  ],
+  "layout": {
+    "template": {
+      "data": {
+        "histogram2dcontour": [
+          {
+            "type": "histogram2dcontour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "choropleth": [
+          {
+            "type": "choropleth",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "histogram2d": [
+          {
+            "type": "histogram2d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmap": [
+          {
+            "type": "heatmap",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmapgl": [
+          {
+            "type": "heatmapgl",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "contourcarpet": [
+          {
+            "type": "contourcarpet",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "contour": [
+          {
+            "type": "contour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "surface": [
+          {
+            "type": "surface",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "mesh3d": [
+          {
+            "type": "mesh3d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "scatter": [
+          {
+            "fillpattern": {
+              "fillmode": "overlay",
+              "size": 10,
+              "solidity": 0.2
+            },
+            "type": "scatter"
+          }
+        ],
+        "parcoords": [
+          {
+            "type": "parcoords",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolargl": [
+          {
+            "type": "scatterpolargl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "bar": [
+          {
+            "error_x": {
+              "color": "#2a3f5f"
+            },
+            "error_y": {
+              "color": "#2a3f5f"
+            },
+            "marker": {
+              "line": {
+                "color": "white",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "bar"
+          }
+        ],
+        "scattergeo": [
+          {
+            "type": "scattergeo",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolar": [
+          {
+            "type": "scatterpolar",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "histogram": [
+          {
+            "marker": {
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "histogram"
+          }
+        ],
+        "scattergl": [
+          {
+            "type": "scattergl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatter3d": [
+          {
+            "type": "scatter3d",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            },
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattermapbox": [
+          {
+            "type": "scattermapbox",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterternary": [
+          {
+            "type": "scatterternary",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattercarpet": [
+          {
+            "type": "scattercarpet",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "carpet": [
+          {
+            "aaxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "#C8D4E3",
+              "linecolor": "#C8D4E3",
+              "minorgridcolor": "#C8D4E3",
+              "startlinecolor": "#2a3f5f"
+            },
+            "baxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "#C8D4E3",
+              "linecolor": "#C8D4E3",
+              "minorgridcolor": "#C8D4E3",
+              "startlinecolor": "#2a3f5f"
+            },
+            "type": "carpet"
+          }
+        ],
+        "table": [
+          {
+            "cells": {
+              "fill": {
+                "color": "#EBF0F8"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "header": {
+              "fill": {
+                "color": "#C8D4E3"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "type": "table"
+          }
+        ],
+        "barpolar": [
+          {
+            "marker": {
+              "line": {
+                "color": "white",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "barpolar"
+          }
+        ],
+        "pie": [
+          {
+            "automargin": true,
+            "type": "pie"
+          }
+        ]
+      },
+      "layout": {
+        "autotypenumbers": "strict",
+        "colorway": [
+          "#636efa",
+          "#EF553B",
+          "#00cc96",
+          "#ab63fa",
+          "#FFA15A",
+          "#19d3f3",
+          "#FF6692",
+          "#B6E880",
+          "#FF97FF",
+          "#FECB52"
+        ],
+        "font": {
+          "color": "#2a3f5f"
+        },
+        "hovermode": "closest",
+        "hoverlabel": {
+          "align": "left"
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "white",
+        "polar": {
+          "bgcolor": "white",
+          "angularaxis": {
+            "gridcolor": "#EBF0F8",
+            "linecolor": "#EBF0F8",
+            "ticks": ""
+          },
+          "radialaxis": {
+            "gridcolor": "#EBF0F8",
+            "linecolor": "#EBF0F8",
+            "ticks": ""
+          }
+        },
+        "ternary": {
+          "bgcolor": "white",
+          "aaxis": {
+            "gridcolor": "#DFE8F3",
+            "linecolor": "#A2B1C6",
+            "ticks": ""
+          },
+          "baxis": {
+            "gridcolor": "#DFE8F3",
+            "linecolor": "#A2B1C6",
+            "ticks": ""
+          },
+          "caxis": {
+            "gridcolor": "#DFE8F3",
+            "linecolor": "#A2B1C6",
+            "ticks": ""
+          }
+        },
+        "coloraxis": {
+          "colorbar": {
+            "outlinewidth": 0,
+            "ticks": ""
+          }
+        },
+        "colorscale": {
+          "sequential": [
+            [
+              0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1,
+              "#f0f921"
+            ]
+          ],
+          "sequentialminus": [
+            [
+              0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1,
+              "#f0f921"
+            ]
+          ],
+          "diverging": [
+            [
+              0,
+              "#8e0152"
+            ],
+            [
+              0.1,
+              "#c51b7d"
+            ],
+            [
+              0.2,
+              "#de77ae"
+            ],
+            [
+              0.3,
+              "#f1b6da"
+            ],
+            [
+              0.4,
+              "#fde0ef"
+            ],
+            [
+              0.5,
+              "#f7f7f7"
+            ],
+            [
+              0.6,
+              "#e6f5d0"
+            ],
+            [
+              0.7,
+              "#b8e186"
+            ],
+            [
+              0.8,
+              "#7fbc41"
+            ],
+            [
+              0.9,
+              "#4d9221"
+            ],
+            [
+              1,
+              "#276419"
+            ]
+          ]
+        },
+        "xaxis": {
+          "gridcolor": "#EBF0F8",
+          "linecolor": "#EBF0F8",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "#EBF0F8",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "yaxis": {
+          "gridcolor": "#EBF0F8",
+          "linecolor": "#EBF0F8",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "#EBF0F8",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "scene": {
+          "xaxis": {
+            "backgroundcolor": "white",
+            "gridcolor": "#DFE8F3",
+            "linecolor": "#EBF0F8",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "#EBF0F8",
+            "gridwidth": 2
+          },
+          "yaxis": {
+            "backgroundcolor": "white",
+            "gridcolor": "#DFE8F3",
+            "linecolor": "#EBF0F8",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "#EBF0F8",
+            "gridwidth": 2
+          },
+          "zaxis": {
+            "backgroundcolor": "white",
+            "gridcolor": "#DFE8F3",
+            "linecolor": "#EBF0F8",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "#EBF0F8",
+            "gridwidth": 2
+          }
+        },
+        "shapedefaults": {
+          "line": {
+            "color": "#2a3f5f"
+          }
+        },
+        "annotationdefaults": {
+          "arrowcolor": "#2a3f5f",
+          "arrowhead": 0,
+          "arrowwidth": 1
+        },
+        "geo": {
+          "bgcolor": "white",
+          "landcolor": "white",
+          "subunitcolor": "#C8D4E3",
+          "showland": true,
+          "showlakes": true,
+          "lakecolor": "white"
+        },
+        "title": {
+          "x": 0.05
+        },
+        "mapbox": {
+          "style": "light"
+        }
+      }
+    },
+    "mapbox": {
+      "center": {
+        "lat": -15,
+        "lon": -54.2
+      },
+      "style": "carto-positron",
+      "zoom": 3.2
+    },
+    "margin": {
+      "r": 5,
+      "t": 5,
+      "l": 5,
+      "b": 5
+    },
+    "plot_bgcolor": "#fafaf7",
+    "paper_bgcolor": "#fafaf7",
+    "autosize": true
+  }
+}
