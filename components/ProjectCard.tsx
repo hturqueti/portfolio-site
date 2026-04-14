@@ -27,7 +27,6 @@ export function ProjectCard({ project }: { project: PostMeta }) {
         </div>
 
         <h2>{project.title}</h2>
-        <p>{project.description}</p>
 
         {project.stack.length > 0 ? (
           <div className="project-card-section">

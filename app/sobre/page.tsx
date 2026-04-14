@@ -488,8 +488,7 @@ export default function AboutPage() {
               <div className="timeline-content surface-card">
                 <div className="timeline-meta">
                   <div>
-                    <p className="timeline-company">{item.company}</p>
-                    <h3>{item.company}</h3>
+                    <p className="timeline-company timeline-company-heading">{item.company}</p>
                   </div>
                   <p className="timeline-period">{formatPeriodWithDuration(item.period)}</p>
                 </div>
