@@ -19,7 +19,7 @@ export default function BlogPage() {
             Todos os <span className="gradient-text">posts</span>
           </h1>
           <p className="section-copy">
-            Conteúdo versionado em Git, escrito em MDX e gerado como site estático com Next.js.
+            Artigos sobre dados, analytics e IA com foco em raciocínio analítico, aplicação prática e comunicação clara de conceitos, métodos e resultados.
           </p>
           <BackHomeButton />
         </div>
