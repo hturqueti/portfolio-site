@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 
 export default function NotFound() {
   return (
@@ -7,10 +7,10 @@ export default function NotFound() {
         Página <span className="gradient-text">não encontrada</span>
       </h1>
       <p>O caminho que você tentou acessar não existe nesta versão do site.</p>
-      <Link href="/" className="button button-primary">
+      <ScrollTopLink href="/" className="button button-primary">
         <span className="button-icon button-icon-home" aria-hidden="true" />
         Voltar para a home
-      </Link>
+      </ScrollTopLink>
     </section>
   )
 }

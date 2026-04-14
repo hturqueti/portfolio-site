@@ -1,11 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import type { FormEvent, KeyboardEvent } from 'react'
 import { useDeferredValue, useEffect, useMemo, useRef, useState, useTransition } from 'react'
 import type { SearchDocument } from '@/lib/posts'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 import { getTagSuggestions, searchPosts, sortSearchResults } from '@/lib/search'
 
 type HeaderSearchProps = {
@@ -179,7 +179,7 @@ export function HeaderSearch({ documents }: HeaderSearchProps) {
             <>
               <div className="search-dropdown-list">
                 {tagSuggestions.map(({ tag, count }, index) => (
-                  <Link
+                  <ScrollTopLink
                     key={tag}
                     href={buildSearchUrl(`#${tag}`)}
                     className={`search-result-link${activeTagIndex === index ? ' search-result-link-active' : ''}`}
@@ -192,7 +192,7 @@ export function HeaderSearch({ documents }: HeaderSearchProps) {
                     <span className="search-result-meta">
                       Buscar {count} {count === 1 ? 'artigo' : 'artigos'} com essa tag
                     </span>
-                  </Link>
+                  </ScrollTopLink>
                 ))}
               </div>
             </>
@@ -200,7 +200,7 @@ export function HeaderSearch({ documents }: HeaderSearchProps) {
             <>
               <div className="search-dropdown-list">
                 {visibleResults.map((result) => (
-                  <Link
+                  <ScrollTopLink
                     key={result.slug}
                     href={`/blog/${result.slug}`}
                     className="search-result-link"
@@ -211,12 +211,12 @@ export function HeaderSearch({ documents }: HeaderSearchProps) {
                       {result.dateLabel}
                       {result.tags.length > 0 ? ` · ${result.tags.join(', ')}` : ''}
                     </span>
-                  </Link>
+                  </ScrollTopLink>
                 ))}
               </div>
 
               {hasMoreResults ? (
-                <Link
+                <ScrollTopLink
                   href={buildSearchUrl(query)}
                   className="search-show-more"
                   onClick={() => {
@@ -225,7 +225,7 @@ export function HeaderSearch({ documents }: HeaderSearchProps) {
                   }}
                 >
                   Mostrar mais
-                </Link>
+                </ScrollTopLink>
               ) : null}
             </>
           ) : (

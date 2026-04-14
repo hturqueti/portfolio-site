@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import type { PostMeta } from '@/lib/posts'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 
 export function PostCard({ post }: { post: PostMeta }) {
   return (
     <article className="post-card">
-      <Link href={`/blog/${post.slug}`} className="card-link-overlay" aria-label={`Abrir post ${post.title}`} />
+      <ScrollTopLink href={`/blog/${post.slug}`} className="card-link-overlay" aria-label={`Abrir post ${post.title}`} />
       <div className="post-meta">
         <span>{post.dateLabel}</span>
         <span>{post.readingTime}</span>
@@ -30,9 +30,9 @@ export function PostCard({ post }: { post: PostMeta }) {
       <div className="post-card-footer">
         <div className="tag-list">
           {post.tags.map((tag) => (
-            <Link key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
+            <ScrollTopLink key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
               #{tag}
-            </Link>
+            </ScrollTopLink>
           ))}
         </div>
       </div>

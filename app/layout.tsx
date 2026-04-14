@@ -3,6 +3,7 @@ import 'katex/dist/katex.min.css'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ScrollTopOnNavigation } from '@/components/ScrollTopOnNavigation'
 
 export const metadata: Metadata = {
   title: 'Henrique M Turqueti',
@@ -29,6 +30,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <ScrollTopOnNavigation />
         <div className="site-shell">
           <Header />
           <main className="main-content">{children}</main>

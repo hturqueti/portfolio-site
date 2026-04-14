@@ -1,10 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useDeferredValue, useEffect, useMemo, useState, useTransition } from 'react'
 import { BackHomeButton } from '@/components/BackHomeButton'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 import type { SearchDocument } from '@/lib/posts'
 import { getTagSuggestions, searchPosts, sortSearchResults, type SearchSort } from '@/lib/search'
 
@@ -143,9 +143,9 @@ export function SearchPageClient({ documents }: SearchPageClientProps) {
       {tagSuggestions.length > 0 && deferredQuery.trim().startsWith('#') ? (
         <div className="search-tag-suggestions">
           {tagSuggestions.map(({ tag, count }) => (
-            <Link key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag search-tag-link">
+            <ScrollTopLink key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag search-tag-link">
               #{tag} · {count} {count === 1 ? 'artigo' : 'artigos'}
-            </Link>
+            </ScrollTopLink>
           ))}
         </div>
       ) : null}
@@ -164,7 +164,7 @@ export function SearchPageClient({ documents }: SearchPageClientProps) {
           <div className="search-results-list">
             {results.map((result) => (
               <article key={result.slug} className="post-card search-result-card">
-                <Link href={`/blog/${result.slug}`} className="card-link-overlay" aria-label={`Abrir post ${result.title}`} />
+                <ScrollTopLink href={`/blog/${result.slug}`} className="card-link-overlay" aria-label={`Abrir post ${result.title}`} />
                 {result.image ? (
                   <Image
                     src={result.image}
@@ -191,9 +191,9 @@ export function SearchPageClient({ documents }: SearchPageClientProps) {
                   <div className="post-card-footer search-result-card-footer">
                     <div className="tag-list">
                       {result.tags.map((tag) => (
-                        <Link key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
+                        <ScrollTopLink key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
                           #{tag}
-                        </Link>
+                        </ScrollTopLink>
                       ))}
                     </div>
                   </div>

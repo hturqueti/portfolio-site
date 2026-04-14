@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
@@ -10,6 +9,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getSingletonHighlighter } from 'shiki'
 import { mdxComponents } from '@/components/mdx-components'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 import { transformObsidianCallouts } from '@/lib/mdx-callouts'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 
@@ -107,9 +107,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             {post.tags.length > 0 ? (
               <div className="tag-list">
                 {post.tags.map((tag) => (
-                  <Link key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
+                  <ScrollTopLink key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
                     #{tag}
-                  </Link>
+                  </ScrollTopLink>
                 ))}
               </div>
             ) : null}

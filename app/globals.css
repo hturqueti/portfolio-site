@@ -633,8 +633,11 @@ a {
   font-weight: 700;
   color: var(--color-text);
   word-break: break-word;
+  transition: color 0.18s ease;
 }
 
+.contact-card:hover .contact-value,
+.contact-card:focus-visible .contact-value,
 .contact-value:hover {
   color: var(--color-primary);
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { BackHomeButton } from '@/components/BackHomeButton'
+import { SmartLink } from '@/components/SmartLink'
 
 const contactMethods = [
   {
@@ -22,8 +23,8 @@ const contactMethods = [
   {
     title: 'LinkedIn',
     description: 'Canal mais direto para networking, oportunidades profissionais e contato rápido sobre carreira e colaboração.',
-    href: 'https://www.linkedin.com',
-    value: 'linkedin.com',
+    href: 'https://www.linkedin.com/in/hturqueti/',
+    value: 'linkedin.com/in/hturqueti',
     cta: 'Abrir LinkedIn',
     iconSrc: '/images/icons/linkedin.svg',
   },
@@ -53,7 +54,7 @@ export default function ContactPage() {
       <section className="container section">
         <div className="contact-grid">
           {contactMethods.map(({ title, description, href, value, iconSrc }) => (
-            <a key={title} href={href} className="contact-card">
+            <SmartLink key={title} href={href} className="contact-card">
               <div className="interest-header">
                 <span className="interest-icon">
                   <Image
@@ -72,7 +73,7 @@ export default function ContactPage() {
 
               <p>{description}</p>
               <span className="contact-value">{value}</span>
-            </a>
+            </SmartLink>
           ))}
         </div>
       </section>

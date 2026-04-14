@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import type { PostMeta } from '@/lib/posts'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 
 export function ProjectCard({ project }: { project: PostMeta }) {
   return (
     <article className="project-card">
-      <Link href={`/blog/${project.slug}`} className="card-link-overlay" aria-label={`Abrir projeto ${project.title}`} />
+      <ScrollTopLink href={`/blog/${project.slug}`} className="card-link-overlay" aria-label={`Abrir projeto ${project.title}`} />
 
       {project.image ? (
         <Image
@@ -55,9 +55,9 @@ export function ProjectCard({ project }: { project: PostMeta }) {
 
         <div className="tag-list">
           {project.tags.map((tag) => (
-            <Link key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
+            <ScrollTopLink key={tag} href={`/busca?q=%23${encodeURIComponent(tag)}`} className="tag interactive-tag">
               #{tag}
-            </Link>
+            </ScrollTopLink>
           ))}
         </div>
       </div>

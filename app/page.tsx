@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { PostCard } from '@/components/PostCard'
 import { ProjectCard } from '@/components/ProjectCard'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 import { getAllPosts, getFeaturedProjects } from '@/lib/posts'
 
 export default function HomePage() {
@@ -30,14 +30,14 @@ export default function HomePage() {
             Projetos, análises e aplicações em dados com foco em simplicidade, clareza e impacto.
           </p>
           <div className="hero-actions">
-            <Link href="/blog" className="button button-primary">
+            <ScrollTopLink href="/blog" className="button button-primary">
               <span className="button-icon button-icon-posts" aria-hidden="true" />
               Ver posts
-            </Link>
-            <Link href="/projetos" className="button button-primary">
+            </ScrollTopLink>
+            <ScrollTopLink href="/projetos" className="button button-primary">
               <span className="button-icon button-icon-projects" aria-hidden="true" />
               Ver projetos
-            </Link>
+            </ScrollTopLink>
           </div>
         </div>
       </section>
@@ -47,9 +47,9 @@ export default function HomePage() {
           <div>
             <h2>Posts mais recentes</h2>
           </div>
-          <Link href="/blog" className="inline-link">
+          <ScrollTopLink href="/blog" className="inline-link">
             Ver todos os posts
-          </Link>
+          </ScrollTopLink>
         </div>
 
         <div className="post-grid">
@@ -67,9 +67,9 @@ export default function HomePage() {
               Casos com mais profundidade, cobrindo contexto, abordagem analítica, modelagem e resultados.
             </p>
           </div>
-          <Link href="/projetos" className="inline-link">
+          <ScrollTopLink href="/projetos" className="inline-link">
             Ver todos os projetos
-          </Link>
+          </ScrollTopLink>
         </div>
 
         {projects.length > 0 ? (

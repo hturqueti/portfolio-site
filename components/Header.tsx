@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { getSearchDocuments } from '@/lib/posts'
 import { HeaderSearch } from '@/components/HeaderSearch'
+import { ScrollTopLink } from '@/components/ScrollTopLink'
 
 export function Header() {
   const documents = getSearchDocuments()
@@ -9,7 +9,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand">
+        <ScrollTopLink href="/" className="brand">
           <Image
             src="/images/branding/logo.svg"
             alt="Logo do site Henrique Turqueti"
@@ -17,16 +17,16 @@ export function Header() {
             height={40}
             priority
           />
-        </Link>
+        </ScrollTopLink>
 
         <HeaderSearch documents={documents} />
 
         <nav className="nav" aria-label="Principal">
-          <Link href="/">Início</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/projetos">Projetos</Link>
-          <Link href="/sobre">Sobre mim</Link>
-          <Link href="/contato">Contato</Link>
+          <ScrollTopLink href="/">Início</ScrollTopLink>
+          <ScrollTopLink href="/blog">Blog</ScrollTopLink>
+          <ScrollTopLink href="/projetos">Projetos</ScrollTopLink>
+          <ScrollTopLink href="/sobre">Sobre mim</ScrollTopLink>
+          <ScrollTopLink href="/contato">Contato</ScrollTopLink>
         </nav>
       </div>
     </header>
