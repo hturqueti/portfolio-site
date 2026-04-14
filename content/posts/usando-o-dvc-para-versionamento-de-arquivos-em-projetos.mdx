@@ -11,15 +11,15 @@ image: "/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/co
 contentType: "post"
 ---
 
-Com a crescente complexidade das análises e dos projetos de dados envolvendo diversos datasets diferentes, o versionamento dos dados usados (e gerados) se torna muito importante para se manter a reprodutibilidade e a transparência dos resultados. O Data Version Control (DVC) surge como uma boa opção de ferramenta para gerenciar e versionar datasets, permitindo que analistas e cientistas de dados acompanhem as mudanças nos dados de maneira similar ao versionamento do código. Além disso, o DVC se integra perfeitamente com sistemas de controle de versão como o Git e em editores de códigos como o VS Code.
+Com a crescente complexidade dos projetos de dados envolvendo múltiplos datasets, o versionamento dos dados usados (e gerados) se torna fundamental para manter a reprodutibilidade e a transparência dos resultados. O Data Version Control (DVC) é uma ferramenta para gerenciar e versionar datasets, permitindo que analistas e cientistas de dados acompanhem as mudanças nos dados de maneira similar ao versionamento de código. Além disso, o DVC se integra com sistemas de controle de versão como o Git e editores como o VS Code.
 
-A seguir serão mostrados o processo de instalação dele e um exemplo de uso prático.
+A seguir, veremos o processo de instalação e um exemplo de uso prático.
 
-## Como instalar o DVC no meu computador?
+## Instalação do DVC
 
-O DVC é escrito na linguagem Python e para evitar que haja conflito com outras bibliotecas nativas do seu sistema é recomendado instalar ele usando o pipx.
+O DVC é escrito em Python. Para evitar conflitos com outras bibliotecas do seu sistema, é recomendado instalá-lo usando o pipx.
 
-O pipx permite que aplicações Python sejam executadas em ambientes isolados e sua instalação é feita com os comandos:
+O pipx permite que aplicações Python sejam executadas em ambientes isolados. A instalação é feita com os comandos:
 
 -   No Ubuntu;
 
@@ -34,14 +34,14 @@ pipx ensurepath
 python3 -m pip install --user pipx
 ```
 
-Com isso, o DVC pode agora ser instalado usando o pipx executando o comando no terminal:
+Com isso, o DVC pode ser instalado executando o comando:
 ```bash
 pipx install dvc[all]
 ```
 
-Obs: o trecho "\[all\]" permite que sejam configurados todos os armazenamentos remotos compatíveis com o DVC, tais como Amazon S3, Azure Blob Storage, Google Cloud, dentre outros.
+Obs: o trecho "\[all\]" permite configurar todos os armazenamentos remotos compatíveis com o DVC, como Amazon S3, Azure Blob Storage, Google Cloud, entre outros.
 
-Para ter certeza que o DVC foi instalado, execute o comando `dvc version` e verifique a sua versão e as dependências instaladas.
+Para verificar se o DVC foi instalado corretamente, execute o comando `dvc version`.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/verificacao-da-versao-instalada-do-dvc.webp"
@@ -49,15 +49,15 @@ Para ter certeza que o DVC foi instalado, execute o comando `dvc version` e veri
   caption="Verificação da versão instalada do DVC."
 />
 
-### Instalando adicionais para uso do Google Cloud como repositório remoto
+### Configuração do Google Cloud como repositório remoto
 
-Como vou usar o Google Cloud para salvar as versões dos dados do meu projeto de exemplo, é necessário instalar alguns pacotes adicionais. que são pré-requisito para o Google Cloud CLI:
+Como usarei o Google Cloud para salvar as versões dos dados do projeto de exemplo, é necessário instalar alguns pacotes adicionais, pré-requisitos para o Google Cloud CLI:
 ```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg curl
 ```
 
-Para seguir com a instalação do CLI, basta executar os seguintes comandos na sequência para:
+Para seguir com a instalação do CLI, execute os seguintes comandos na sequência:
 
 -   Importar a chave pública do Google Cloud;
 ```bash
@@ -76,11 +76,11 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 
 Com o CLI instalado, você deve executar `gcloud init` para escolher o login e projeto da sua conta Google Cloud.
 
-Lembrando que essas instalações adicionais foram necessárias porque escolhi o Google Cloud Storage como armazenamento remoto para os meus arquivos. Caso deseje usar outra opção, é possível consultar a compatibilidade com outros serviços em [DVC Remote Storage](https://dvc.org/doc/user-guide/data-management/remote-storage).
+Essas instalações adicionais foram necessárias porque o Google Cloud Storage foi escolhido como armazenamento remoto. Para usar outra opção, consulte a compatibilidade em [DVC Remote Storage](https://dvc.org/doc/user-guide/data-management/remote-storage).
 
-## Como configurar e usar o DVC para versionar os meus dados?
+## Configuração e uso do DVC
 
-Para exemplificar aqui, irei mostrar como configurar usando o Google Cloud Storage em um projeto fictício onde um notebook gera um arquivo .csv com dados numéricos aleatórios em 1000 linhas e 2 colunas com a seguinte estrutura:
+Para exemplificar, mostrarei como configurar o DVC com o Google Cloud Storage em um projeto fictício onde um notebook gera um arquivo .csv com dados numéricos aleatórios em 1000 linhas e 2 colunas:
 ```bash
 ├── .git/
 ├── .gitignore
@@ -99,7 +99,7 @@ O primeiro arquivo .csv gerado tem as seguintes 5 primeiras linhas:
   caption="Primeiras 5 linhas da primeira versão do arquivo .csv"
 />
 
-O primeiro passo é já ter inicializado o Git na pasta do seu projeto e vinculado ele ao seu repositório remoto. Depois, você deve inicializar o DVC no mesmo repositório navegando até a pasta dele pelo Terminal e usando o comando `dvc init`.
+O primeiro passo é ter o Git inicializado e vinculado ao repositório remoto. Depois, inicialize o DVC no mesmo repositório navegando até a pasta pelo terminal e executando `dvc init`.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/verificacao-da-versao-instalada-do-dvc-2.webp"
@@ -123,7 +123,7 @@ Após incluir esses arquivos no versionamento do Git e fazer o commit, você pod
   caption="Status de início de versionamento da pasta dados"
 />
 
-Agora é a hora de escolher em qual bucket e pasta do Google Cloud os arquivos serão versionados. No meu caso eu criei a pasta "dvc-tutorial" dentro do bucket "dvc-files". O comando para adicionar essa pasta como repositório remoto é o `dvc remote add --default [nome do repositorio] gs://[nome do bucket]/[nome da pasta]`.
+Agora é hora de definir em qual bucket e pasta do Google Cloud os arquivos serão versionados. No meu caso, criei a pasta "dvc-tutorial" dentro do bucket "dvc-files". O comando para adicionar a pasta como repositório remoto é `dvc remote add --default [nome do repositorio] gs://[nome do bucket]/[nome da pasta]`.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/adicao-da-pasta-no-google-cloud-storage-como-armazenamento-remoto.webp"
@@ -131,7 +131,7 @@ Agora é a hora de escolher em qual bucket e pasta do Google Cloud os arquivos s
   caption="Adição da pasta no Google Cloud Storage como armazenamento remoto"
 />
 
-Para fazer o login na sua conta e autorizar o DVC a criar e excluir arquivos, deve ser executado o comando `gcloud auth application-default login`.
+Para autorizar o DVC a criar e excluir arquivos na sua conta, execute o comando `gcloud auth application-default login`.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/autenticacao-do-google-cloud-cli.webp"
@@ -139,9 +139,9 @@ Para fazer o login na sua conta e autorizar o DVC a criar e excluir arquivos, de
   caption="Autenticação do Google Cloud CLI"
 />
 
-Após a execução do comando, é aberta uma aba no seu navegador onde é possível inserir o login e senha. Com isso, é salva uma chave de acesso no seu computador que permite que outros aplicativos interajam com os recursos do Google Cloud.
+Após a execução do comando, uma aba do navegador é aberta para inserir login e senha. Com isso, uma chave de acesso é salva no computador, permitindo que outros aplicativos interajam com os recursos do Google Cloud.
 
-Agora, basta usar o comando `dvc push` para sincronizar a pasta dados e os arquivos dentro dela com o repositório remoto.
+Agora, use o comando `dvc push` para sincronizar a pasta de dados com o repositório remoto.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/upload-dos-arquivos-versionados-para-o-armazenamento-remoto.webp"
@@ -173,7 +173,7 @@ Agora vou gerar um novo DataFrame na mesma estrutura mas com outros dados aleat�
   caption="Primeiras 5 linhas da segunda versão do arquivo .csv"
 />
 
-Feito isso, o comando `dvc diff` o DVC já identifica que tiveram mudanças na pasta dos dados.
+Feito isso, com o comando `dvc diff` o DVC já identifica que houve mudanças na pasta dos dados.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/listagem-dos-arquivos-e-pastas-modificados-que-foram-identificados-pelo-dvc.webp"
@@ -187,9 +187,9 @@ O processo para salvar o estado atual dele é o mesmo para a primeira versão:
 -   `dvc push` para subir os arquivos para o bucket no Google Cloud;
 -   Subir no GitHub o arquivo "dados.dvc"
 
-Vamos supor agora que você tenha gerado dados de resposta de um modelo ou processo várias vezes e precise restaurar a versão de um arquivo que já foi substituído, como fazer isso?
+Suponha que você tenha gerado dados de resposta de um modelo várias vezes e precise restaurar uma versão anterior de um arquivo já substituído.
 
-O primeiro passo é saber qual é o hash do commit que você subiu o seu arquivo .dvc para o GItHub (aí está a importância de sempre ter commits bem comentados). Para listar os últimos 2 commits, você pode usar o comando `git log -2 --format=oneline`.
+O primeiro passo é identificar o hash do commit em que o arquivo .dvc foi enviado ao GitHub (daí a importância de commits bem descritivos). Para listar os últimos 2 commits, use `git log -2 --format=oneline`.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/listagem-dos-ultimos-dois-commits-feitos.webp"
@@ -197,9 +197,9 @@ O primeiro passo é saber qual é o hash do commit que você subiu o seu arquivo
   caption="Listagem dos últimos dois commits feitos"
 />
 
-Agora você deve restaurar o arquivo "dados.dvc" que está na pasta raiz do projeto. Para isso, basta usar o comando `git checkout 196adf – dados.dvc` (aqui não é necessário usar o hash inteiro do commit, apenas os 6 primeiros caracteres já são suficientes).
+Agora, restaure o arquivo "dados.dvc" da pasta raiz do projeto usando `git checkout 196adf – dados.dvc` (não é necessário usar o hash completo; os 6 primeiros caracteres são suficientes).
 
-Com o arquivo "dados.dvc" fazendo referência à versão que você precisa, basta digitar `dvc pull` para baixar do Google Drive o arquivo .csv.
+Com o arquivo "dados.dvc" apontando para a versão desejada, basta executar `dvc pull` para baixar o arquivo .csv do Google Cloud.
 
 <MdxFigure
   src="/images/posts/usando-o-dvc-para-versionamento-de-arquivos-em-projetos/status-do-download-da-primeira-versao-do-arquivo-csv-que-estava-no-armazenamento-remoto.webp"
@@ -215,11 +215,11 @@ Por fim, vamos carregar novamente o arquivo .csv em um DataFrame do Pandas:
   caption="Carregamento do arquivo csv em um DataFrame do Pandas no Python"
 />
 
-Aqui é possível ver que ele possui os mesmos dados da primeira versão gerada mesmo o arquivo tendo sido sobrescrito uma vez.
+Aqui é possível ver que os dados são os mesmos da primeira versão gerada, mesmo o arquivo tendo sido sobrescrito.
 
 ------------------------------------------------------------------------
 
-Depois de já ter todos os programas necessários instalados no seu sistema, o uso do DVC é relativamente fácil. Os comandos são semelhantes aos do Git e você tem a flexibilidade de versionar apenas os dados importantes para o seu projeto, trazendo a segurança de poder ter salvas as versões dos seus arquivos sem ter que colocar ao final do nome deles coisas como "\_v1", "\_v2" e etc.
+Com todos os programas instalados, o uso do DVC é relativamente simples. Os comandos são semelhantes aos do Git e você tem a flexibilidade de versionar apenas os dados importantes do projeto, sem precisar recorrer a sufixos como "\_v1", "\_v2" nos nomes dos arquivos.
 
 O fluxo para se usar o DVC pode ser resumido com os passos ilustrados na imagem a seguir:
 
@@ -229,4 +229,4 @@ O fluxo para se usar o DVC pode ser resumido com os passos ilustrados na imagem 
   caption="Resumo do fluxo dos dados ao usar o DVC"
 />
 
-Caso seja necessário, é possível consultar a documentação oficial também em [DVC Documentation](https://dvc.org/doc).
+Para mais detalhes, consulte a documentação oficial em [DVC Documentation](https://dvc.org/doc).

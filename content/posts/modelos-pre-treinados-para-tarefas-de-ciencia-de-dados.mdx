@@ -10,9 +10,9 @@ image: "/images/posts/modelos-pre-treinados-para-tarefas-de-ciencia-de-dados/cov
 contentType: "post"
 ---
 
-Cientistas de dados e empresas criam modelos de machine learning a todo momento para os mais diversos tipos de tarefas e especificidades, então é bem capaz de ao se deparar com a necessidade de ter que usar um modelo para classificação de textos ou geração de imagens, por exemplo, você já possa começar de um ponto de partida mais avançado ou até mesmo apenas consumir um que esteja 100% alinhado com o que você precisa.
+Cientistas de dados e empresas criam modelos de machine learning a todo momento para os mais diversos tipos de tarefas. Ao se deparar com a necessidade de usar um modelo para classificação de textos ou geração de imagens, por exemplo, é possível começar de um ponto de partida mais avançado ou até consumir um modelo que esteja 100% alinhado com o que você precisa.
 
-Além dos artigos dos pesquisadores que contribuíram para a construção desses modelos, uma ótima fonte para encontrá-los é na [plataforma Hugging Face](https://huggingface.co). Ela conta com uma interface amigável e diversos filtros disponíveis, como por exemplo a atividade fim do modelo:
+Além dos artigos dos pesquisadores que contribuíram para a construção desses modelos, uma ótima fonte para encontrá-los é a [plataforma Hugging Face](https://huggingface.co). Ela conta com uma interface amigável e diversos filtros, como a atividade-fim do modelo:
 
 <MdxFigure
   src="/images/posts/modelos-pre-treinados-para-tarefas-de-ciencia-de-dados/tipos-de-tarefas-possiveis-para-os-modelos-compartilhados-na-plataforma-hugging-face.webp"
@@ -20,17 +20,17 @@ Além dos artigos dos pesquisadores que contribuíram para a construção desses
   caption="Tipos de tarefas possíveis para os modelos compartilhados na plataforma Hugging Face"
 />
 
-Para demonstrar a aplicabilidade da Hugging Face, vou utilizar um modelo de classificação de sentimentos para analisar comentários de compras do [dataset da Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). Esse conjunto de dados contém avaliações dos consumidores e o modelo será capaz de identificar automaticamente se o sentimento por trás dos comentários é positivo, neutro ou negativo.
+Para demonstrar a aplicabilidade da Hugging Face, utilizarei um modelo de classificação de sentimentos para analisar comentários de compras do [dataset da Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). Esse conjunto de dados contém avaliações dos consumidores, e o modelo identifica automaticamente se o sentimento dos comentários é positivo, neutro ou negativo.
 
-## Exemplo prático de classificação de sentimentos em comentários
+## Exemplo prático: classificação de sentimentos em comentários
 
-Como o dataset que eu vou analisar possui comentários em português, eu irei usar o modelo [pysentimiento/bertweet-pt-sentiment](https://huggingface.co/pysentimiento/bertweet-pt-sentiment). Para conseguir utilizar ele é necessário que sejam instaladas as bibliotecas `transformers` e a `PyTorch` executando o seguinte comando no seu ambiente de desenvolvimento:
+Como o dataset possui comentários em português, utilizarei o modelo [pysentimiento/bertweet-pt-sentiment](https://huggingface.co/pysentimiento/bertweet-pt-sentiment). Para utilizá-lo, é necessário instalar as bibliotecas `transformers` e `PyTorch`:
 
 ```bash
 pip install transformers torch
 ```
 
-Após importar as bibliotecas necessárias para as análises, a referência e download do modelo são feitos usando a classe `pipeline` da biblioteca `transformers`.
+Após importar as bibliotecas necessárias, a referência e o download do modelo são feitos usando a classe `pipeline` da biblioteca `transformers`.
 ```python
 import numpy as np
 import pandas as pd
@@ -45,7 +45,7 @@ modelo_sentimento = pipeline(
 )
 ```
 
-Para testar se o modelo foi carregado corretamente, você pode passar um texto diretamente da célula do seu notebook para ver se não é exibida nenhuma mensagem de erro e como é o formato da resposta.
+Para testar se o modelo foi carregado corretamente, basta passar um texto diretamente da célula do seu notebook e verificar o formato da resposta.
 ```python
 resposta_modelo = modelo_sentimento(
     "gostei bastante do produto recebido",
@@ -61,7 +61,7 @@ pprint(resposta_modelo)
   caption="Resposta do modelo de análise de sentimentos para o texto de exemplo"
 />
 
-Aqui pudemos ver que além de trazer o sentimento do texto o algoritmo traz também o score de cada um deles, podendo ser bem útil ao lidar com casos mais ambíguos.
+Além de trazer o sentimento do texto, o modelo retorna também o score de cada uma das categorias, o que pode ser útil ao lidar com casos mais ambíguos.
 
 Agora, vamos carregar o dataset com as notas e comentários das compras feitas pelos clientes.
 ```python
@@ -78,7 +78,7 @@ avaliacoes.head(1).T
   caption="Layout da base de avaliações dos clientes da Olist"
 />
 
-Como é possível ter informações úteis tanto no título quanto no corpo do texto do comentário, eu irei concatenar os dois e realizar alguns tratamentos para facilitar a análise de sentimento pelo modelo.
+Como há informações úteis tanto no título quanto no corpo do comentário, concatenarei os dois campos e realizarei alguns tratamentos para facilitar a análise de sentimento.
 ```python
 # Concatena o título do comentário com o seu conteúdo
 avaliacoes["review_text"] = (
@@ -117,8 +117,8 @@ avaliacoes["review_text"] = avaliacoes["review_text"].str.strip()
 avaliacoes["review_text"] = avaliacoes["review_text"].replace("", np.nan)
 ```
 
-Com a execução desse código, a nova coluna criada já deve desconsiderar casos onde o comentário é um ponto ou apenas um espaço em branco, ficando aqueles que tenham pelo menos 1 palavra. Para ter uma dimensão da proporção de comentários nas avaliações, vamos contar os NaNs na coluna "review_text".
-```
+Com a execução desse código, a nova coluna criada descarta casos onde o comentário é apenas um ponto ou espaço em branco, mantendo aqueles com pelo menos uma palavra. Para dimensionar a proporção de comentários nas avaliações, vamos contar os valores nulos na coluna "review_text".
+```python
 avaliacoes["review_text"].isna().value_counts()
 ```
 
@@ -128,7 +128,7 @@ avaliacoes["review_text"].isna().value_counts()
   caption="Contagem de nulos na coluna tratada de comentários mostrando que mais da metade das avaliações não possuem um comentário escrito"
 />
 
-Agora, irei selecionar 1.000 comentários aleatórios da base e as três variáveis "review_id", "review_score" e "review_text".
+A seguir, selecionarei 1.000 comentários aleatórios da base e as três variáveis "review_id", "review_score" e "review_text".
 ```python
 amostra_comentarios = avaliacoes.loc[
     avaliacoes["review_text"].notna(),
@@ -136,7 +136,7 @@ amostra_comentarios = avaliacoes.loc[
 ].sample(1000).copy()
 ```
 
-Além da lista de dicionários retornada pelo modelo, ao analisar uma linha com comentário eu também irei criar uma coluna para cada score dos três sentimentos e mais uma outra coluna que traz apenas o sentimento de maior pontuação.
+Além da lista de dicionários retornada pelo modelo, criarei uma coluna para cada score dos três sentimentos e uma coluna adicional com o sentimento de maior pontuação.
 ```python
 # Cria uma coluna com o dicionário de sentimentos e seus respectivos scores
 amostra_comentarios["sentiment"] = amostra_comentarios["review_text"].map(
@@ -177,7 +177,7 @@ amostra_comentarios.head()
   caption="DataFrame com a amostra de 1.000 avaliações e suas respectivas colunas com informações de sentimento dos comentários"
 />
 
-Para analisar se a classificação de sentimento foi feita de forma adequada, irei selecionar aleatoriamente 5 comentários e notas de cada um, começando pelos positivos.
+Para verificar se a classificação de sentimento foi adequada, selecionarei aleatoriamente 5 comentários e suas notas, começando pelos positivos.
 ```python
 # Positivos
 print(
@@ -194,7 +194,7 @@ print(
   caption="5 comentários com sentimento positivo com a nota da avaliação e o score do modelo"
 />
 
-Vemos aqui que a classificação feita pelo modelo concorda tanto com o texto escrito quanto com a nota dada pelo cliente, sem grandes *insights*.
+A classificação feita pelo modelo concorda tanto com o texto escrito quanto com a nota dada pelo cliente, sem grandes *insights*.
 ```python
 # Neutros
 print(
@@ -211,7 +211,7 @@ print(
   caption="5 comentários com sentimento neutro com a nota da avaliação e o score do modelo"
 />
 
-Nos comentários classificados como "neutros" podemos ver notas nos dois extremos. As notas máximas trazem dois comentários indicando que o produto foi entregue normalmente sem problemas enquanto o terceiro diz que o produto veio com defeito mas a loja responsável irá realizar a troca. Já nas notas mínimas, um deles o próprio cliente diz que o produto está no prazo de entrega mas ele avaliou com 1 estrela o pedido, enquanto no outro o cliente informa que a entrega foi feita parcialmente com a falta de um dos produtos.
+Nos comentários classificados como "neutros", há notas nos dois extremos. As notas máximas trazem dois comentários indicando que o produto foi entregue normalmente, enquanto o terceiro diz que o produto veio com defeito, mas a loja irá realizar a troca. Já nas notas mínimas, em um deles o próprio cliente diz que o produto está no prazo de entrega, mas avaliou com 1 estrela; no outro, o cliente informa que a entrega foi feita parcialmente, com a falta de um dos produtos.
 ```python
 # Negativos
 print(
@@ -228,9 +228,9 @@ print(
   caption="5 comentários com sentimento negativo com a nota da avaliação e o score do modelo"
 />
 
-Por fim, nos comentários classificados como "negativos" temos notas neutras e detratoras e comentários abordando os seguintes temas: produtos não entregues (ou entregue depois do prazo), produto diferente do divulgado no site e a cobrança de frete feita de forma individual para produtos repetidos.
+Por fim, nos comentários classificados como "negativos", há notas neutras e detratoras com comentários sobre: produtos não entregues (ou entregues depois do prazo), produto diferente do divulgado no site e cobrança de frete individual para produtos repetidos.
 
-Um outro uso para o modelo é tentar entender casos onde o sentimento é positivo mas a nota detratora ou sentimento é negativo mas a nota é promotora. Vamos agora pegar uma amostra de 5 comentários que estão em uma dessas duas situações.
+Outro uso para o modelo é entender casos onde o sentimento é positivo mas a nota é detratora, ou o sentimento é negativo mas a nota é promotora. A seguir, uma amostra de 5 comentários nessas situações.
 ```python
 # Notas divergentes do sentimento
 print(
@@ -252,10 +252,10 @@ print(
   caption="5 comentários com sentimento divergente da nota dada pelo cliente"
 />
 
-O segundo e terceiro comentários da amostra mostram que apesar do cliente elogiar a plataforma de compra e o produto recebido ainda assim ele deu uma nota baixa. Uma ação possível seria ignorar essas avaliações na composição das métricas das lojas que efetuaram essa venda, já que claramente não houve nenhum problema. O primeiro e último comentários trazem reclamações sobre preço e prazo do frete mas com notas boas, o que indica que o produto solicitado não era tão urgente para o último comentário enquanto o primeiro indica que provavelmente foi comprado um produto de baixo valor agregado e com um vendedor distante do comprador. Já o quarto comentário mostra o atraso de um dos produtos da compra mas com uma nota boa porque o outro produto chegou dias antes do prazo final.
+O segundo e terceiro comentários da amostra mostram que, apesar do cliente elogiar a plataforma e o produto recebido, ele deu uma nota baixa. Uma ação possível seria desconsiderar essas avaliações na composição das métricas das lojas, já que não houve nenhum problema. O primeiro e o último comentários trazem reclamações sobre preço e prazo do frete, mas com notas boas — o que indica que o produto não era urgente para o último caso, enquanto o primeiro sugere um produto de baixo valor com vendedor distante do comprador. Já o quarto comentário relata o atraso de um dos produtos da compra, mas com nota boa porque o outro produto chegou antes do prazo.
 
 ------------------------------------------------------------------------
 
-Caso você já tenha contato com a linguagem de programação Python o uso dos modelos pré-treinados acaba sendo relativamente fácil com o uso da plataforma Hugging Face. Lembrando que cada modelo pode usar diferentes bibliotecas e podem ter formas diferentes de serem usados, sendo necessário sempre ver o código de exemplo disponibilizado na aba "Model card".
+Se você já tem contato com Python, o uso de modelos pré-treinados é relativamente simples com a Hugging Face. Cada modelo pode usar bibliotecas diferentes e ter formas distintas de ser utilizado, sendo sempre necessário consultar o código de exemplo na aba "Model card".
 
-Para dúvidas específicas de um modelo escolhido é possível abrir uma discussão no próprio link do modelo na aba "Community", enquanto que para dúvidas mais genéricas o usuário ainda tem a opção de usar o [fórum do Hugging Face](https://discuss.huggingface.co) para interagir com outras pessoas.
+Para dúvidas específicas de um modelo, é possível abrir uma discussão na aba "Community" do próprio modelo. Para dúvidas mais genéricas, o [fórum do Hugging Face](https://discuss.huggingface.co) é uma boa opção para interagir com a comunidade.

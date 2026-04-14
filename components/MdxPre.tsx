@@ -31,6 +31,8 @@ export function MdxPre({ children, ...props }: PreProps) {
   const [isCopied, setIsCopied] = useState(false)
   const timeoutRef = useRef<number | null>(null)
   const textToCopy = getTextContent(children)
+  const lineCount = textToCopy.replace(/\n$/, '').split('\n').length
+  const isSingleLine = lineCount <= 1
 
   useEffect(() => {
     return () => {
@@ -58,8 +60,10 @@ export function MdxPre({ children, ...props }: PreProps) {
   }
 
   return (
-    <div className="mdx-pre-wrap">
-      <div className="code-copy-controls">
+    <div className={`mdx-pre-wrap${isSingleLine ? ' mdx-pre-wrap-single-line' : ''}`}>
+      <div
+        className={`code-copy-controls${isSingleLine ? ' code-copy-controls-single-line' : ''}${isCopied ? ' code-copy-controls-copied' : ''}`}
+      >
         <span
           className={`code-copy-feedback${isCopied ? ' code-copy-feedback-visible' : ''}`}
           aria-hidden="true"

@@ -4,11 +4,17 @@ type MdxFigureProps = {
   caption?: string
 }
 
+function normalizeCaption(caption?: string) {
+  return caption?.trim().replace(/\.+$/, '')
+}
+
 export function MdxFigure({ src, alt, caption }: MdxFigureProps) {
+  const normalizedCaption = normalizeCaption(caption)
+
   return (
     <figure className="mdx-figure">
       <img src={src} alt={alt} className="mdx-figure-image" loading="lazy" />
-      {caption ? <figcaption className="mdx-figure-caption">{caption}</figcaption> : null}
+      {normalizedCaption ? <figcaption className="mdx-figure-caption">{normalizedCaption}</figcaption> : null}
     </figure>
   )
 }

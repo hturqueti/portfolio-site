@@ -9,15 +9,15 @@ image: "/images/posts/similaridade-entre-strings-e-fuzzy-matching/cover.webp"
 contentType: "post"
 ---
 
-No contexto de análise de dados é bastante comum o uso dos joins no SQL e do `df.merge()` no Pandas quando queremos obter correspondências exatas entre dois registros, mas qual seria a alternativa quando queremos encontrar strings que são diferentes, mas semelhantes? É para isso que serve a técnica de *fuzzy matching* e da biblioteca Python `thefuzz` que veremos a seguir.
+Na análise de dados, é bastante comum o uso de joins no SQL e do `df.merge()` no Pandas para obter correspondências exatas entre registros. Mas qual seria a alternativa quando queremos encontrar strings diferentes, porém semelhantes? É para isso que serve a técnica de *fuzzy matching*, que veremos a seguir com a biblioteca Python `thefuzz`.
 
 # Aplicações da técnica
 
-A necessidade de se encontrar strings semelhantes pode ocorrer em diversos tipos de atividades envolvendo dados, como:
+A necessidade de encontrar strings semelhantes pode ocorrer em diversos tipos de atividades envolvendo dados.
 
-Suponha que você trabalhe no RH de um banco e você precisa encontrar cargos com uma carreira semelhante, e que esse tipo de informação já não venha na sua base de dados. Nesse caso seria possível comparar os cargos uns com os outros e agrupar aqueles que tivessem uma similaridade acima do limiar definido, como por exemplo: "GTE CONTAS PF VAREJO", "AST CONTAS PF VAREJO", "GTE CONTAS PJ VAREJO" e "GTE CONTAS PF ATACADO".
+Suponha que você trabalhe no RH de um banco e precise encontrar cargos com carreiras semelhantes, sem que essa informação já venha na sua base de dados. Nesse caso, seria possível comparar os cargos entre si e agrupar aqueles com similaridade acima de um limiar definido, como por exemplo: "GTE CONTAS PF VAREJO", "AST CONTAS PF VAREJO", "GTE CONTAS PJ VAREJO" e "GTE CONTAS PF ATACADO".
 
-Agora imagine que você trabalha em uma área de CRM e o sistema de registro de *leads* permite que sejam digitados os nomes das cidades em um campo aberto ao invés de se ter uma validação com a lista de cidade brasileiras por trás. Com isso, sua base de dados pode ter diferentes registros que significam na prática a mesma coisa:
+Agora imagine que você trabalha em uma área de CRM e o sistema de registro de *leads* permite que os nomes das cidades sejam digitados em um campo aberto, sem validação com a lista de cidades brasileiras. Com isso, sua base de dados pode ter registros diferentes que representam a mesma coisa:
 
 | **cidade** | **estado** |
 |------------|------------|
@@ -31,13 +31,13 @@ _Tabela de exemplo com o nome da cidade de São Paulo escrita de maneiras difere
 
 Mesmo corrigindo o sistema para incluir essa validação no processo de cadastro, ainda seria necessário tratar os dados para agrupar os registros antigos.
 
-# Como calcular a similaridade entre strings
+# Cálculo da similaridade entre strings
 
-Antes de demonstrar como fazer as comparações usando o Python, é fundamental entender a métrica principal por trás do cálculo de similaridade: a Distância de Levenshtein.
+Antes de demonstrar as comparações usando Python, é fundamental entender a métrica principal por trás do cálculo de similaridade: a Distância de Levenshtein.
 
 ## Distância de Levenshtein
 
-A distância de Levenshtein entre duas strings `a` e `b`, definida por **lev(a, b)**, mede a **quantidade mínima de edições** necessárias para transformar a string `a` em `b`. São 3 tipos de edições disponíveis e com elas é possível transformar qualquer string em outra:
+A distância de Levenshtein entre duas strings `a` e `b`, definida por **lev(a, b)**, mede a **quantidade mínima de edições** necessárias para transformar a string `a` em `b`. São 3 tipos de edições, e com elas é possível transformar qualquer string em outra:
 
 -   **Adição:** incluir um novo caractere em qualquer posição da string;
 -   **Remoção:** remover um caractere existente na string;
@@ -45,11 +45,21 @@ A distância de Levenshtein entre duas strings `a` e `b`, definida por **lev(a, 
 
 Para facilitar o cálculo dessa quantidade mínima de edições, o algoritmo recursivo abaixo auxilia com um passo a passo.
 
-<MdxFigure
-  src="/images/posts/similaridade-entre-strings-e-fuzzy-matching/algoritmo-recursivo-para-o-calculo-da-distancia-de-levenshtein.svg"
-  alt="Algoritmo recursivo para o cálculo da Distância de Levenshtein"
-  caption="Algoritmo recursivo para o cálculo da Distância de Levenshtein"
-/>
+$$
+\operatorname{lev}(a,b)=
+\begin{cases}
+|a| & \text{se } |b| = 0, \\
+|b| & \text{se } |a| = 0, \\
+\operatorname{lev}(\operatorname{tail}(a), \operatorname{tail}(b)) & \text{se } \operatorname{head}(a) = \operatorname{head}(b), \\
+1 + \min
+\begin{cases}
+\operatorname{lev}(\operatorname{tail}(a), b) \\
+\operatorname{lev}(a, \operatorname{tail}(b)) \\
+\operatorname{lev}(\operatorname{tail}(a), \operatorname{tail}(b))
+\end{cases}
+& \text{caso contrário}
+\end{cases}
+$$
 
 Onde:
 
@@ -68,29 +78,29 @@ Apesar de parecer um pouco complicado, vamos calcular a distância para alguns e
 
 _Tabela com exemplos de cálculo da Distância de Levenshtein_
 
-Agora que conhecemos o cálculo da distância, como podemos medir o quão similar uma string é da outra? Existem algumas formas diferentes de fazer isso, e o uso vai depender do tipo de aplicação que você fará e que tipo de resultado você espera.
+Agora que conhecemos o cálculo da distância, como medir o quão similar uma string é da outra? Existem algumas formas diferentes, e a escolha depende do tipo de aplicação e do resultado esperado.
 
 ## Tipos de similaridade
 
-A biblioteca `thefuzz` pode ser instalada de forma simples usando o comando `pip install thefuzz` em seu ambiente de desenvolvimento Python e importada no seu Jupyter notebook por meio de dois módulos com `from thefuzz import fuzz, process`.
+A biblioteca `thefuzz` pode ser instalada com o comando `pip install thefuzz` e importada no seu Jupyter notebook com `from thefuzz import fuzz, process`.
 
-Para quaisquer métodos explicados a seguir, a similaridade será um número de 0 a 100, onde a similaridade é proporcional à grandeza desse número.
+Em todos os métodos a seguir, a similaridade é um número de 0 a 100, proporcional ao grau de semelhança entre as strings.
 
 ### fuzz.ratio()
 
-O método `fuzz.ratio()` leva em consideração o tamanho de cada uma das strings e a Distância de Levenshtein entre elas, simplesmente. O resultado é o cálculo abaixo.
+O método `fuzz.ratio()` considera o tamanho de cada string e a Distância de Levenshtein entre elas. O resultado é dado pela fórmula:
 
 $$
 \operatorname{ratio}(a, b)=\frac{|a| + |b| - \operatorname{lev}(a,b)}{|a| + |b|}\cdot 100
 $$
 
-Olhando a fórmula anterior podemos perceber que pares de palavras com distâncias iguais podem ter similaridades diferentes a depender dos seus tamanhos, como:
+Pela fórmula, pares de palavras com distâncias iguais podem ter similaridades diferentes dependendo dos seus tamanhos:
 
 (fotografia, fotografado) possuem a mesma distância que (férias, feriado), mas o primeiro par possui uma similaridade de 86 enquanto o segundo par tem uma similaridade igual a 62 devido ao tamanho menor das palavras.
 
 ### fuzz.partial_ratio()
 
-Esse método apresenta um resultado diferente do anterior quando as strings a e b possuem tamanhos diferentes, já que o método da razão simples é aplicado entre a menor string e as substrings de mesmo tamanho dentro da string maior.
+Esse método apresenta um resultado diferente quando as strings `a` e `b` possuem tamanhos diferentes. O método da razão simples é aplicado entre a menor string e as substrings de mesmo tamanho dentro da string maior.
 
 Vamos fazer passo a passo com as strings `a = "portugues"` e `b = "aportuguesar"`, sendo \|a\| = 9 e \|b\| = 12. Para percorrer a string `b` sempre mantendo o mesmo tamanho de `a`, são necessárias 4 iterações.
 
@@ -117,7 +127,7 @@ tokens_a
 # ['vou', 'de', 'carro', 'à', 'praia']
 ```
 
-O método `fuzz.token_sort_ratio()` primeiro tokeniza as duas strings, depois ordena ambas em ordem alfabética, depois une os tokens adicionando novamente o espaço como separador e por fim aplica o método da razão simples nas duas strings modificadas. Vamos calcular agora a similaridade por `fuzz.token_sort_ratio()` usando diretamente o método e de forma manual (transformando as strings para no fim aplicar o `fuzz.ratio()`).
+O método `fuzz.token_sort_ratio()` tokeniza as duas strings, ordena os tokens em ordem alfabética, une-os novamente com espaço e aplica o método da razão simples. A seguir, o cálculo usando o método diretamente e de forma manual:
 ```python
 a = "vou de carro à praia"
 b = "vou à praia de carro"
@@ -141,9 +151,9 @@ Como as duas strings possuem exatamente apenas a mesma palavra mas em ordens dif
 
 ### fuzz.token_set_ratio()
 
-É utilizado o método `fuzz.ratio()` para comparar as duas strings levando em consideração a intersecção dos seus tokens e também na diferença de tokens entre elas.
+É utilizado o método `fuzz.ratio()` para comparar as duas strings considerando a intersecção dos seus tokens e a diferença de tokens entre elas.
 
-Caso os tokens de uma string sejam um subconjunto dos tokens da segunda string (mesmo que esta possua outros tokens ausentes na primeira), o resultado será igual a 100
+Se os tokens de uma string forem um subconjunto dos tokens da segunda string (mesmo que esta possua outros tokens ausentes na primeira), o resultado será igual a 100.
 ```python
 a = "Marcos de Freitas de Carvalho"
 b = "Marcos Freitas de Carvalho"
@@ -155,7 +165,7 @@ fuzz.token_sort_ratio(a, b)
 # 95
 ```
 
-Nesse método de cálculo o resultado será menor que 100 apenas se ambas as strings contiverem algum token exclusivo, como no caso abaixo onde a variável `a` possui a palavra "José" e a variável `b` possui a palavra "Albuquerque".
+Nesse método, o resultado será menor que 100 apenas se ambas as strings contiverem algum token exclusivo. No caso abaixo, a variável `a` possui a palavra "José" e a variável `b` possui a palavra "Albuquerque".
 ```python
 a = "Marcos de Freitas de Carvalho José"
 b = "Marcos Freitas de Carvalho Albuquerque"
@@ -166,7 +176,7 @@ fuzz.token_set_ratio(a, b)
 
 ### fuzz.partial_token_sort_ratio()
 
-É uma combinação do `fuzz.token_sort_ratio()` com o `fuzz.partial_ratio()`. As strings são tokenizadas, ordenadas e unidas novamente, mas ao invés de comparar o resultado das duas strings transformadas, a menor delas é comparada às substrings de mesmo tamanho dentro da string maior.
+É uma combinação do `fuzz.token_sort_ratio()` com o `fuzz.partial_ratio()`. As strings são tokenizadas, ordenadas e unidas novamente, mas a menor delas é comparada às substrings de mesmo tamanho dentro da string maior.
 ```python
 a = "João da Silva"
 b = "João Silva"
@@ -184,7 +194,7 @@ A similaridade nesse caso é igual a 100 devido à primeira string ter sido tran
 
 É uma combinação do `fuzz.token_set_ratio()` com o `fuzz.partial_ratio()`.
 
-Se houver pelo menos um único token em comum entre ambas as strings, a similaridade será igual a 100. Caso contrário, o método `fuzz.partial_ratio()` é aplicado levando em consideração a intersecção dos tokens e também a diferença de tokens entre as strings..
+Se houver pelo menos um token em comum entre as strings, a similaridade será igual a 100. Caso contrário, o método `fuzz.partial_ratio()` é aplicado considerando a intersecção dos tokens e a diferença entre as strings.
 ```python
 a = "José Antônio de Fonseca"
 b = "Marcos Freitas de Carvalho Albuquerque"
@@ -197,28 +207,28 @@ fuzz.partial_token_set_ratio(b, c)
 # 69
 ```
 
-Analisando as strings `a` e `b`, percebemos que existem o token "de" em comum entre elas, e isso é o suficiente para que a similaridade desse método seja igual a 100, não importando os outros elementos.
+Analisando as strings `a` e `b`, percebemos que existe o token "de" em comum entre elas, o que é suficiente para que a similaridade desse método seja igual a 100, independentemente dos outros elementos.
 
 Já na comparação das strings `b` e `c`, a menor delas possui duas palavras semelhantes a duas palavras da maior string, resultando em uma similaridade de 69.
 
 ## Comparações em lotes
 
-Voltando ao exemplo onde seria necessário se comparar um nome de cargo com uma lista com vários nomes de cargos, uma das possibilidades seria criar um laço `for` e aplicar um dos métodos vistos anteriormente em todos os elementos e salvar esses resultados em outra lista ou dicionário.
+Voltando ao exemplo de comparar um nome de cargo com uma lista de cargos, uma opção seria criar um laço `for` e aplicar um dos métodos vistos anteriormente em todos os elementos.
 
-Felizmente isso não é necessário, já que a biblioteca `thefuzz` possui o módulo `process` que nos permite o calcular a similaridade de uma string com todas as ocorrências de uma lista de strings. Vamos ver agora alguns métodos desse módulo e como aplicá-los.
+Felizmente isso não é necessário, já que a biblioteca `thefuzz` possui o módulo `process`, que calcula a similaridade de uma string com todas as ocorrências de uma lista. A seguir, alguns métodos desse módulo.
 
 ### process.extractBests()
 
 É possível passar os seguintes argumentos para esse método:
 
--   query: string para ser comparada com as demais
--   choices: lista (ou dicionário) de strings que serão comparadas com a "query"
--   processor: qualquer função de pré-processamento para ser aplicada tanto à "query" quanto a "choices"
--   scorer: algum método específico para calcular a similaridade, como `fuzz.ratio()`
--   score_cutoff: número de 0 a 100 que define a similaridade mínima para que uma comparação seja retornada
--   limit: quantidade dos melhores resultados retornados, sendo possível utilizar o `None` para retornar todos
+-   query: string a ser comparada com as demais
+-   choices: lista (ou dicionário) de strings para comparação
+-   processor: função de pré-processamento aplicada tanto à "query" quanto a "choices"
+-   scorer: método específico para calcular a similaridade, como `fuzz.ratio()`
+-   score_cutoff: número de 0 a 100 que define a similaridade mínima para retorno
+-   limit: quantidade dos melhores resultados retornados (`None` para retornar todos)
 
-Vamos testar agora esse método de algumas formas.
+Exemplos de uso:
 ```python
 cargo_comparavel = "GTE CONTAS PF VAREJO"
 
@@ -252,7 +262,7 @@ process.extractBests(cargo_comparavel, lista_cargos, scorer=fuzz.partial_token_s
 
 ### process.extractOne()
 
-Bem similar ao método `process.extractBests()`, mas nesse caso é retornado apenas a string com maior similaridade. Caso haja um empate, é retornada a primeira ocorrência com a maior similaridade.
+Similar ao método `process.extractBests()`, mas retorna apenas a string com maior similaridade. Em caso de empate, é retornada a primeira ocorrência.
 ```python
 cargo_comparavel = "GTE CONTAS PF VAREJO"
 
@@ -271,8 +281,8 @@ process.extractOne(cargo_comparavel, lista_cargos, scorer=fuzz.partial_token_set
 
 ------------------------------------------------------------------------
 
-Como podemos ver, *fuzzy matching* é uma técnica poderosa que pode ter diversas aplicações no mundo dos dados e, graças à biblioteca `thefuzz`, o seu uso é bem simples na linguagem Python.
+Como visto, *fuzzy matching* é uma técnica poderosa com diversas aplicações no mundo dos dados. Graças à biblioteca `thefuzz`, seu uso é simples em Python.
 
-Talvez a principal dificuldade encontrada seja a de escolher o tipo de similaridade a ser calculada, já que existem inúmeras opções. O recomendado é que sejam testadas primeiramente as similaridades mais simples como `fuzz.ratio()`, `fuzz.partial_ratio()` e `fuzz.token_sort_ratio()` antes de tentar aplicar métodos mais complexos.
+A principal dificuldade costuma ser a escolha do tipo de similaridade, já que existem diversas opções. O recomendado é testar primeiro as similaridades mais simples, como `fuzz.ratio()`, `fuzz.partial_ratio()` e `fuzz.token_sort_ratio()`, antes de partir para métodos mais complexos.
 
-Já conhecia essa técnica ou sabe de alguma aplicação em que ela poderia ser útil? Deixe nos comentários :)
+Já conhecia essa técnica ou sabe de alguma aplicação em que ela poderia ser útil?
